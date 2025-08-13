@@ -1,25 +1,15 @@
-// Mui Icons
-import MenuIcon from "@mui/icons-material/Menu";
-
-// React Router
-import { Link } from "react-router-dom";
 // React
 import { useState } from "react";
 
-// Redux
-// import { useSelector } from "react-redux";
+// components
+import ApplicationBar from "../components/ApplicationBar";
+import Navigator from "../components/Navigator";
 
-// Components
-
-import SideBar from "../components/SideBar";
-
-export default function ResponsiveDrawer() {
-
-
-
+export default function DashboardLayoutBasic() {
   return (
     <>
-      <SideBar />
+      <ApplicationBar />
+      <Navigator />
     </>
   );
 }

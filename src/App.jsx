@@ -20,15 +20,11 @@ import DashboardContainer from "./pages/DashboardContainer";
 // Components
 import DarkModeToggle from "./components/DarkModeToggle";
 
-// flowbite
-import { ThemeInit } from "../.flowbite-react/init";
-import { DarkThemeToggle } from "flowbite-react";
 export default function App() {
   return (
     <>
-      {/* <DarkModeToggle /> */}
-      <DarkThemeToggle className="fixed right-5 bottom-5 p-1 border-none duration-200 rounded-full" />
-      <ThemeInit />
+      <DarkModeToggle />
+
       <DashboardContainer>
         {/* Routes */}
         <Routes>

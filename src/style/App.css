@@ -1,24 +1,26 @@
 @import "tailwindcss";
-@plugin "flowbite-react/plugin/tailwindcss";
-@source "../../.flowbite-react/class-list.json";
-@custom-variant dark (&:is(.dark *));
+@custom-variant dark (&:where(.dark, .dark *));
 @theme {
-  --color-primary-main: #41528a;
-  --color-primary-dark: #13264a;
-  --color-secondary-main: #f7f7fa;
-  --color-text-main: #495057;
-  --color-text-light: #878a99;
-  --color-text-base: #fff;
-  --color-brand-orange: "#ff8040";
-  --color-brand-lightOrange: "#fff7e8";
-  --color-brand-blue: "#11d1b7";
-  --color-brand-lightBlue: "#ebfafc";
-  --color-brand-purple: "#6a5df0";
-  --color-brand-lightPurple: "#e8e6fc";
-  --color-brand-darkPurple: "#41528a";
-  --color-brand-green: "#11d1be";
-  --color-brand-lightGreen: "#dcf7f3";
-  --color-primary-dark-main: #212529;
-  --color-secondary-dark-main: #1a1d21;
-  --color-secondary-text-main: #acb1b5;
+  --color-primary-light: #41528a;
+  --color-primary-dark: #212529;
+
+  --color-secondary-light: #f5f5fa;
+  --color-secondary-dark: #1a1d21;
+
+  --color-text-900: #49508f;
+  --color-text-800: #6a6e7d;
+  --color-text-700: #94a3d4;
+  --color-text-500: #f2f3f7;
+
+  --color-green: #0bb39c;
+  --color-lightGreen: #daf5f1;
+
+  --color-blue: #2a9ddb;
+  --color-lightBlue: #def0fa;
+
+  --color-orange: #f7b84a;
+  --color-lightOrange: #fff5e6;
+
+  --color-purple: #41528a;
+  --color-lightPurple: #e1e4ed;
 }

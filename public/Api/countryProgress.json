@@ -1,0 +1,8 @@
+{
+  "countries": [
+    { "countryName": "USA", "progressPercent": 75 },
+    { "countryName": "Canada", "progressPercent": 60 },
+    { "countryName": "UK", "progressPercent": 85 },
+    { "countryName": "Germany", "progressPercent": 50 }
+  ]
+}

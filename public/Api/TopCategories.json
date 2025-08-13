@@ -1,0 +1,14 @@
+{
+  "categories": [
+    { "categoryName": "Mobile & Accessories", "count": 10294 },
+    { "categoryName": "Desktop", "count": 6256 },
+    { "categoryName": "Electronics", "count": 3479 },
+    { "categoryName": "Home & Furniture", "count": 2275 },
+    { "categoryName": "Grocery", "count": 1950 },
+    { "categoryName": "Fashion", "count": 1582 },
+    { "categoryName": "Appliances", "count": 1037 },
+    { "categoryName": "Beauty, Toys & More", "count": 924 },
+    { "categoryName": "Food & Drinks", "count": 701 },
+    { "categoryName": "Toys & Games", "count": 239 }
+  ]
+}

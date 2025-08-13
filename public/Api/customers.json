@@ -1,0 +1,802 @@
+[
+  {
+    "customerId": "01K2ABQCNZ0SAJ38HYKWJGTFA5",
+    "customerName": "Homerus Derdes",
+    "email": "hderdes0@aboutads.info",
+    "phone": "812-445-5404",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCP1JWD0HZWEX8FWDYXH",
+    "customerName": "Lyndel Petch",
+    "email": "lpetch1@nsw.gov.au",
+    "phone": "788-732-0826",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCP28YZZFWT4T34M1YFD",
+    "customerName": "Cecil Schust",
+    "email": "cschust2@a8.net",
+    "phone": "889-799-7939",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCP32H9M4RY2T247NK5S",
+    "customerName": "Royall Comini",
+    "email": "rcomini3@biblegateway.com",
+    "phone": "621-581-6017",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCP4SDYYV81FJM9T7PQD",
+    "customerName": "Gray Mapston",
+    "email": "gmapston4@infoseek.co.jp",
+    "phone": "240-101-2239",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCP5XBNXC4R76K1YR1QX",
+    "customerName": "Barbara-anne Paige",
+    "email": "bpaige5@craigslist.org",
+    "phone": "174-245-2095",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCP6A4MND8PJEKE6F4PJ",
+    "customerName": "Maiga Stonhard",
+    "email": "mstonhard6@eepurl.com",
+    "phone": "512-751-2018",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCP7WXVR9M1DD8BNY6ZJ",
+    "customerName": "Anette Keyzman",
+    "email": "akeyzman7@hibu.com",
+    "phone": "214-673-9913",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCP9DTEYAX16RV17MAJ5",
+    "customerName": "Iris Corbert",
+    "email": "icorbert8@gnu.org",
+    "phone": "466-108-9578",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPAFJPYGFN84FQ23ZKB",
+    "customerName": "Bellina Flaune",
+    "email": "bflaune9@last.fm",
+    "phone": "886-685-4688",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPADT8REVWX29H2JQTM",
+    "customerName": "Eda Willcocks",
+    "email": "ewillcocksa@surveymonkey.com",
+    "phone": "534-885-5152",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPBMNCTC2VH58EQXR9Y",
+    "customerName": "Susie Domanek",
+    "email": "sdomanekb@merriam-webster.com",
+    "phone": "114-667-0753",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPC2NPFF4JSFWV3G2B6",
+    "customerName": "Con Loveman",
+    "email": "clovemanc@merriam-webster.com",
+    "phone": "219-173-5337",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPDB74BRKJVD00E84QD",
+    "customerName": "Samantha Justham",
+    "email": "sjusthamd@1und1.de",
+    "phone": "538-726-5063",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPDY87KGBQ590Q6RSXH",
+    "customerName": "Almeta Benson",
+    "email": "abensone@wp.com",
+    "phone": "688-428-3350",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPEJFPN9NFN5VMHK7Q8",
+    "customerName": "Kelsey Kohrt",
+    "email": "kkohrtf@addthis.com",
+    "phone": "993-905-1587",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPFNR5J4GFN1QPRX24Q",
+    "customerName": "Lawrence Rawdall",
+    "email": "lrawdallg@economist.com",
+    "phone": "211-693-9994",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPG6HV44YR86K4DZW74",
+    "customerName": "Marna McKennan",
+    "email": "mmckennanh@over-blog.com",
+    "phone": "117-493-6604",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPG8507XXJ98S4Z273P",
+    "customerName": "Joachim Tyer",
+    "email": "jtyeri@examiner.com",
+    "phone": "888-658-1169",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPHC0YP10BS4G51D22A",
+    "customerName": "Lesya Pendleberry",
+    "email": "lpendleberryj@narod.ru",
+    "phone": "434-596-8083",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPJPCGN9KD75E6QACVC",
+    "customerName": "Jilli Jackling",
+    "email": "jjacklingk@cisco.com",
+    "phone": "598-929-0681",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPKHFAWV50F83ZE9ZDP",
+    "customerName": "Francklyn Clampett",
+    "email": "fclampettl@hugedomains.com",
+    "phone": "953-152-8691",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPKPAW04MPZTAXYD4E7",
+    "customerName": "Dana Lindblad",
+    "email": "dlindbladm@tuttocitta.it",
+    "phone": "898-810-1686",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPM7ZQSK38TMXQZB0Y3",
+    "customerName": "Anni Dolligon",
+    "email": "adolligonn@zimbio.com",
+    "phone": "849-385-2235",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPNACPFD7JCMSCE8H41",
+    "customerName": "Jermayne Farrants",
+    "email": "jfarrantso@artisteer.com",
+    "phone": "807-144-7652",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPPEVQCTFVS5Z71M9SG",
+    "customerName": "Viviene Clavering",
+    "email": "vclaveringp@xing.com",
+    "phone": "680-716-9630",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPQDWYDG0BMW62T93N9",
+    "customerName": "Nike Pittle",
+    "email": "npittleq@lycos.com",
+    "phone": "371-738-8215",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPR7JF9NTJ223JX9Z4D",
+    "customerName": "Nealson McElroy",
+    "email": "nmcelroyr@hibu.com",
+    "phone": "829-483-6352",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPRT20EG8R13FWNY8AE",
+    "customerName": "Alika Garrad",
+    "email": "agarrads@ameblo.jp",
+    "phone": "450-526-1100",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPSFS2CN9XF2ZC3XM8T",
+    "customerName": "Alvy Headingham",
+    "email": "aheadinghamt@admin.ch",
+    "phone": "296-812-7711",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPTN7AW17A2133D2AZR",
+    "customerName": "Skyler Wildsmith",
+    "email": "swildsmithu@hhs.gov",
+    "phone": "979-426-7304",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPVWKWPHK16GKZYR1Q9",
+    "customerName": "Kain Davenhill",
+    "email": "kdavenhillv@springer.com",
+    "phone": "696-821-5628",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCPWGHVD948T88V5QM51",
+    "customerName": "Ky Hendin",
+    "email": "khendinw@ted.com",
+    "phone": "792-832-3091",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPXPGYAEH2GRRAEMT5F",
+    "customerName": "Elsy Alonso",
+    "email": "ealonsox@wisc.edu",
+    "phone": "162-729-6977",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPYZ87ZPV26ZVZ5CPHD",
+    "customerName": "Abdel Wallsam",
+    "email": "awallsamy@mail.ru",
+    "phone": "474-465-2547",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPYWXYAE479KAQCKJVZ",
+    "customerName": "Corbett Ramsbottom",
+    "email": "cramsbottomz@jugem.jp",
+    "phone": "437-170-6531",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCPZ7TEWW3GB9JFQRR19",
+    "customerName": "Nora Giovanizio",
+    "email": "ngiovanizio10@deliciousdays.com",
+    "phone": "912-892-9150",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQ0Y1J93EHWAQX6288E",
+    "customerName": "Roch Kyndred",
+    "email": "rkyndred11@homestead.com",
+    "phone": "392-302-6316",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQ1ANQMAGEJJ7AWS5KT",
+    "customerName": "Mersey Fakes",
+    "email": "mfakes12@ameblo.jp",
+    "phone": "730-927-1351",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQ2HGJ622MKTTE659XB",
+    "customerName": "Ursala Gauthorpp",
+    "email": "ugauthorpp13@canalblog.com",
+    "phone": "892-980-7738",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQ3A0DNE9XDE62YFCRM",
+    "customerName": "Francklyn Fryd",
+    "email": "ffryd14@answers.com",
+    "phone": "586-106-4870",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQ4V9ZHZTG5DY3BH4EQ",
+    "customerName": "Sybille Pahler",
+    "email": "spahler15@slate.com",
+    "phone": "229-607-4006",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQ6726EEEH2FTF812J9",
+    "customerName": "Skippy Grimmer",
+    "email": "sgrimmer16@bluehost.com",
+    "phone": "619-463-7135",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQ7NX8TK2XRFNNJG0JZ",
+    "customerName": "Griswold Tort",
+    "email": "gtort17@netscape.com",
+    "phone": "687-449-0061",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQ8CD56YB5NQ77VZ50E",
+    "customerName": "Kayne McJerrow",
+    "email": "kmcjerrow18@washington.edu",
+    "phone": "367-639-9259",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQ94YA5NFWCN8ANYA1J",
+    "customerName": "Xenos Golson",
+    "email": "xgolson19@51.la",
+    "phone": "292-906-4989",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQAHZP93Z011W07X6CK",
+    "customerName": "Rubina Mollen",
+    "email": "rmollen1a@webs.com",
+    "phone": "793-835-5196",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQCF20T46KT61ZMDWTC",
+    "customerName": "Waldo Troctor",
+    "email": "wtroctor1b@webs.com",
+    "phone": "602-645-7916",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQDGSHN4XCRG58SN2CF",
+    "customerName": "Geralda Loch",
+    "email": "gloch1c@yellowbook.com",
+    "phone": "478-961-6458",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQE734FHMRTM8GBXPRX",
+    "customerName": "Donaugh Mathivat",
+    "email": "dmathivat1d@bandcamp.com",
+    "phone": "310-669-6607",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQF0H0X72RHMMT2KYNB",
+    "customerName": "Hadria Isoldi",
+    "email": "hisoldi1e@mysql.com",
+    "phone": "499-534-7808",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQGK73DXKW58KGTAE0Y",
+    "customerName": "Jolene Tytterton",
+    "email": "jtytterton1f@cargocollective.com",
+    "phone": "658-431-4101",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQJ6HQ0BC2SSXECZ1H6",
+    "customerName": "Padraig Keoghan",
+    "email": "pkeoghan1g@gizmodo.com",
+    "phone": "717-960-1822",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQKCNQ8B10KZGKYZEZQ",
+    "customerName": "Rebekkah Morgan",
+    "email": "rmorgan1h@linkedin.com",
+    "phone": "639-971-1885",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQMFNKBK19KR2A5JENQ",
+    "customerName": "Ravid Elcocks",
+    "email": "relcocks1i@indiatimes.com",
+    "phone": "219-785-8406",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQNA53FTBT3DPVP1MPK",
+    "customerName": "Elianore Bambrick",
+    "email": "ebambrick1j@indiatimes.com",
+    "phone": "738-578-1570",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQQ39V6H61B2DA75E1Y",
+    "customerName": "Flo Neachell",
+    "email": "fneachell1k@pagesperso-orange.fr",
+    "phone": "904-898-9304",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQRMCDRAA6PRKTW13J8",
+    "customerName": "Herbert Greson",
+    "email": "hgreson1l@opensource.org",
+    "phone": "309-547-1085",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQSRC01R3344KHFQBW8",
+    "customerName": "Humfrey Tanslie",
+    "email": "htanslie1m@va.gov",
+    "phone": "843-246-1533",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCQVXDKBHRHCYX74A719",
+    "customerName": "Velma Sivyour",
+    "email": "vsivyour1n@is.gd",
+    "phone": "652-694-3894",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQWYANAJJYVZN225P92",
+    "customerName": "Ali Garrold",
+    "email": "agarrold1o@nsw.gov.au",
+    "phone": "627-826-8107",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQX647RX5M5NG4TXBK7",
+    "customerName": "Feodor Binstead",
+    "email": "fbinstead1p@epa.gov",
+    "phone": "157-667-6717",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCQZYD6JY36GJMJ66JE2",
+    "customerName": "Jobye Thorne",
+    "email": "jthorne1q@sciencedaily.com",
+    "phone": "317-403-9226",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCR0DP7PBMPPR0KC0K79",
+    "customerName": "Oswald Jarville",
+    "email": "ojarville1r@columbia.edu",
+    "phone": "286-887-7347",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCR1QFH1ZFN88C37R5B5",
+    "customerName": "Twyla Tarte",
+    "email": "ttarte1s@flickr.com",
+    "phone": "639-341-5886",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCR2AD1KF4DEW3XGJ0WP",
+    "customerName": "Rochelle Bosch",
+    "email": "rbosch1t@mapquest.com",
+    "phone": "565-489-1204",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCR4D0V84W6Q43KG04KC",
+    "customerName": "Evaleen McCarthy",
+    "email": "emccarthy1u@omniture.com",
+    "phone": "770-186-2249",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCR5QYRRNG85T9RDSFQ5",
+    "customerName": "Belva Ivanchikov",
+    "email": "bivanchikov1v@wufoo.com",
+    "phone": "157-155-0630",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCR6787DTRZ4NMB0DGR9",
+    "customerName": "Patrick Trewett",
+    "email": "ptrewett1w@yellowpages.com",
+    "phone": "978-489-1050",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCR7YJYZ9WRWTTMC8D5W",
+    "customerName": "Leesa Cessford",
+    "email": "lcessford1x@ebay.co.uk",
+    "phone": "591-947-8990",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCR99M3R98DXH753V7HV",
+    "customerName": "Keely Dunbar",
+    "email": "kdunbar1y@cisco.com",
+    "phone": "969-835-9910",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRACXSB424NV7PZPFEJ",
+    "customerName": "Mano Cluelow",
+    "email": "mcluelow1z@issuu.com",
+    "phone": "929-742-8894",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRBSVVRNXGW57SRKBFC",
+    "customerName": "Lazare Devons",
+    "email": "ldevons20@is.gd",
+    "phone": "828-815-2283",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRCGRY5MH85M4R1JR14",
+    "customerName": "Rodrigo Gladtbach",
+    "email": "rgladtbach21@jimdo.com",
+    "phone": "762-397-3979",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRDAXW3R0F5NEQ8X313",
+    "customerName": "Vyky Caitlin",
+    "email": "vcaitlin22@time.com",
+    "phone": "708-435-9671",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCREG7907636SFDEYVHF",
+    "customerName": "Marice Pumfrett",
+    "email": "mpumfrett23@vk.com",
+    "phone": "376-951-2111",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRF81D8QZ9NY6SC53Y8",
+    "customerName": "Selle Bladder",
+    "email": "sbladder24@statcounter.com",
+    "phone": "882-641-1427",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRH6TRRTWD83F7QJ3NW",
+    "customerName": "Ivor Amerighi",
+    "email": "iamerighi25@xrea.com",
+    "phone": "155-841-0672",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRJWYTTTXHMXM6258SH",
+    "customerName": "Vick Yakebovich",
+    "email": "vyakebovich26@domainmarket.com",
+    "phone": "704-579-7314",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRJQ7HFSHNA5AB1RRKH",
+    "customerName": "Pet Perllman",
+    "email": "pperllman27@weather.com",
+    "phone": "947-424-6626",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRK4DTGFQNYSQXH59E2",
+    "customerName": "Alberta Ind",
+    "email": "aind28@tmall.com",
+    "phone": "725-104-8211",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRM9HHMMASG4CMN6BPP",
+    "customerName": "Rollin Jahnel",
+    "email": "rjahnel29@mozilla.com",
+    "phone": "687-638-8652",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRNDQSJF5X71EZFYE29",
+    "customerName": "Kincaid Merchant",
+    "email": "kmerchant2a@rakuten.co.jp",
+    "phone": "842-631-1971",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRP9P3BFEBVXW6CE3PT",
+    "customerName": "Tressa Gladbeck",
+    "email": "tgladbeck2b@comcast.net",
+    "phone": "897-741-1858",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRQQVA083732DYHJAJ3",
+    "customerName": "Monte Dorkin",
+    "email": "mdorkin2c@gmpg.org",
+    "phone": "196-286-6553",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRQNADR5G46B2M19DET",
+    "customerName": "Timothea Nias",
+    "email": "tnias2d@slate.com",
+    "phone": "119-746-0083",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRRA9V93ENGHDG7Q025",
+    "customerName": "Annabell Bardey",
+    "email": "abardey2e@studiopress.com",
+    "phone": "339-858-1788",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRS1GZ5X6YNHH5TWVXW",
+    "customerName": "Mei Larwell",
+    "email": "mlarwell2f@google.co.uk",
+    "phone": "669-193-8717",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRTS989387BAS3YGNVG",
+    "customerName": "Xymenes Pesticcio",
+    "email": "xpesticcio2g@istockphoto.com",
+    "phone": "985-641-1953",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRT6RZT8GJWZYGVN0MC",
+    "customerName": "Noam Turle",
+    "email": "nturle2h@privacy.gov.au",
+    "phone": "202-449-5151",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRVXK0TFXC89KZC2CR3",
+    "customerName": "Jehanna Colter",
+    "email": "jcolter2i@auda.org.au",
+    "phone": "856-974-8737",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRW0QZDYF0Q4EXK0WQB",
+    "customerName": "Hayes Berk",
+    "email": "hberk2j@yellowbook.com",
+    "phone": "121-877-9035",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRXPAZHYEE9N08TC9TN",
+    "customerName": "Marion Setchfield",
+    "email": "msetchfield2k@artisteer.com",
+    "phone": "854-245-6121",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRXSC9F2YCXEJFV8S4M",
+    "customerName": "Flynn MacGilmartin",
+    "email": "fmacgilmartin2l@salon.com",
+    "phone": "886-407-6770",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCRY32Y55MVS219D9138",
+    "customerName": "Phoebe Kort",
+    "email": "pkort2m@arizona.edu",
+    "phone": "601-686-3530",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCRZC7RKFZ9RBJXZ8621",
+    "customerName": "Benedetto Prendeville",
+    "email": "bprendeville2n@cbc.ca",
+    "phone": "463-600-7981",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCS06S8H4MGC13PWMJC6",
+    "customerName": "Lian Glidden",
+    "email": "lglidden2o@cargocollective.com",
+    "phone": "611-268-3136",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCS08DT8JV926C73JJ83",
+    "customerName": "Vivien Aronovich",
+    "email": "varonovich2p@google.com.au",
+    "phone": "684-425-7030",
+    "joiningDate": "12/15/2024",
+    "status": "Inactive"
+  },
+  {
+    "customerId": "01K2ABQCS1HGXRSCDE981ZNYFJ",
+    "customerName": "Katha Briar",
+    "email": "kbriar2q@free.fr",
+    "phone": "387-770-1404",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  },
+  {
+    "customerId": "01K2ABQCS2TZSF4C8GCBGEJMP1",
+    "customerName": "Saidee Handmore",
+    "email": "shandmore2r@engadget.com",
+    "phone": "600-287-1097",
+    "joiningDate": "12/15/2024",
+    "status": "Active"
+  }
+]

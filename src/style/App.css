@@ -1,0 +1,24 @@
+@import "tailwindcss";
+@plugin "flowbite-react/plugin/tailwindcss";
+@source "../../.flowbite-react/class-list.json";
+@custom-variant dark (&:is(.dark *));
+@theme {
+  --color-primary-main: #41528a;
+  --color-primary-dark: #13264a;
+  --color-secondary-main: #f7f7fa;
+  --color-text-main: #495057;
+  --color-text-light: #878a99;
+  --color-text-base: #fff;
+  --color-brand-orange: "#ff8040";
+  --color-brand-lightOrange: "#fff7e8";
+  --color-brand-blue: "#11d1b7";
+  --color-brand-lightBlue: "#ebfafc";
+  --color-brand-purple: "#6a5df0";
+  --color-brand-lightPurple: "#e8e6fc";
+  --color-brand-darkPurple: "#41528a";
+  --color-brand-green: "#11d1be";
+  --color-brand-lightGreen: "#dcf7f3";
+  --color-primary-dark-main: #212529;
+  --color-secondary-dark-main: #1a1d21;
+  --color-secondary-text-main: #acb1b5;
+}

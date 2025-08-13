@@ -1,0 +1,9 @@
+{
+  "trafficSources": [
+    { "source": "Direct", "visits": 1200 },
+    { "source": "Social", "visits": 800 },
+    { "source": "Email", "visits": 450 },
+    { "source": "Other", "visits": 300 },
+    { "source": "Referrals", "visits": 600 }
+  ]
+}

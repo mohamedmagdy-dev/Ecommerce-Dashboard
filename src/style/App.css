@@ -1,5 +1,11 @@
 @import "tailwindcss";
 @custom-variant dark (&:where(.dark, .dark *));
+
+body {
+  font-family: "Roboto", sans-serif;
+}
+@source "../node_modules/flowbite-datepicker";
+
 @theme {
   --color-primary-light: #41528a;
   --color-primary-dark: #212529;

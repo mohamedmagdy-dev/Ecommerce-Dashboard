@@ -6,15 +6,18 @@ import Navigator from "../components/Navigator";
 export default function DashboardLayoutBasic({ children }) {
   const [collapseMenu, setCollapseMenu] = useState(false);
 
-  function handelCollapseMenu() {
+  function handleCollapseMenu() {
     setCollapseMenu((prev) => !prev);
   }
   return (
     <div className="flex">
       <Navigator collapseMenu={collapseMenu} />
       <div className="grow">
-        <ApplicationBar handelCollapseMenu={handelCollapseMenu} />
-        <div className="p-3">{children}</div>
+        <ApplicationBar
+          handleCollapseMenu={handleCollapseMenu}
+          collapseMenu={collapseMenu}
+        />
+        <div>{children}</div>
       </div>
     </div>
   );

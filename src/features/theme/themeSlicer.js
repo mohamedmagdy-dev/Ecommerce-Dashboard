@@ -7,10 +7,8 @@ const themeSlicer = createSlice({
   },
   reducers: {
     toggleMode: (state) => {
-      document
-        .getElementsByTagName("html")[0]
-        .classList.toggle("dark");
-     
+      document.getElementsByTagName("html")[0].classList.toggle("dark");
+
       state.themeMode = state.themeMode === "light" ? "dark" : "light";
     },
   },

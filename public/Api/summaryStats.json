@@ -1,6 +1,6 @@
 {
-  "totalEarnings": 45000.75,
-  "orders": 1200,
-  "customers": 350,
-  "myBalance": 1200.50
+  "totalEarnings": { "total": 45000.75, "rate": 15.25 },
+  "orders": { "total": 1200, "rate": -55.25 },
+  "customers": { "total": 100, "rate": 55.25 },
+  "myBalance": { "total": 9000, "rate": 5.25 }
 }

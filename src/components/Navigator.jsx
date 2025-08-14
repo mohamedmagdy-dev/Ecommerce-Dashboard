@@ -28,7 +28,7 @@ export default function Navigator({ collapseMenu }) {
     {
       text: "Dashboard",
       icon: DashboardIcon,
-      path: "/Home",
+      path: "/",
     },
     {
       text: "Products",
@@ -92,6 +92,7 @@ export default function Navigator({ collapseMenu }) {
         ? "!text-[var(--color-text-500)] "
         : "text-[var(--color-text-700)] "
     } 
+    flex
     `;
   };
 

@@ -8,9 +8,9 @@ export default function ApplicationBar({ handelCollapseMenu }) {
             onClick={() => handelCollapseMenu()}
             data-collapse-toggle="navbar-hamburger"
             type="button"
-            className=" cursor-pointer
+            className="hidden min-md:inline-flex cursor-pointer
             duration-200
-             inline-flex items-center 
+              items-center 
              justify-center p-2 w-10 h-10 
              text-sm text-[var(--color-text-900)]
               dark:text-[var(--color-text-500)] rounded-lg

@@ -79,7 +79,7 @@ export default function Navigator({ collapseMenu }) {
   ];
 
   const asideStyle = clsx(
-    "h-[100svh] p-3 shadow-sm w-fit min-md:w-[240px]",
+    "h-[100svh] p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto",
     themeMode === "light"
       ? "bg-[var(--color-primary-light)]"
       : "bg-[var(--color-primary-dark)]",
@@ -135,7 +135,7 @@ export default function Navigator({ collapseMenu }) {
           )}
         />
       </Link>
-      <ul className="flex flex-col gap-7 pt-8">
+      <ul className="flex flex-col gap-7 pt-8 pb-5 overflow-hidden">
         <MenuItems />
       </ul>
     </aside>

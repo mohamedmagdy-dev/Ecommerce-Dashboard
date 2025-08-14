@@ -1,9 +1,10 @@
 //React Router
-import { Link } from "react-router-dom";
+import { Link, useLocation } from "react-router-dom";
 // Image
 import Logo from "../assets/imgs/logo-light.png";
+import LogoSm from "../assets/imgs/logo-sm.png";
 // react
-import { useState } from "react";
+// import { useState } from "react";
 // mui icons
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import CategoryIcon from "@mui/icons-material/Category";
@@ -17,11 +18,12 @@ import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 import { useSelector } from "react-redux";
+// clsx
+import clsx from "clsx";
 
-const navigationWidth = 240;
-export default function Navigator() {
+export default function Navigator({ collapseMenu }) {
+  const location = useLocation();
   const { themeMode } = useSelector((state) => state.theme);
-  const [activeButton, setActiveButton] = useState(0);
   const menuItems = [
     {
       text: "Dashboard",
@@ -76,17 +78,17 @@ export default function Navigator() {
     },
   ];
 
-  const asideStyle = {
-    width: `${navigationWidth}px`,
-    backgroundColor:
-      themeMode === "light"
-        ? "var(--color-primary-light)"
-        : "var(--color-primary-dark)",
-  };
+  const asideStyle = clsx(
+    "h-[100svh] p-3 shadow-sm w-fit min-md:w-[240px]",
+    themeMode === "light"
+      ? "bg-[var(--color-primary-light)]"
+      : "bg-[var(--color-primary-dark)]",
+    collapseMenu && "!w-fit"
+  );
 
-  const listItemStyle = (index) => {
-    return `duration-200 text-md dark:text-[var(--color-text-800)] hover:text-[var(--color-text-500)]  ${
-      activeButton === index
+  const listItemStyle = (path) => {
+    return `duration-200 text-md  dark:text-[var(--color-text-800)] hover:text-[var(--color-text-500)]  ${
+      location.pathname === path
         ? "!text-[var(--color-text-500)] "
         : "text-[var(--color-text-700)] "
     } 
@@ -96,26 +98,46 @@ export default function Navigator() {
   function MenuItems() {
     return menuItems.map((item, index) => {
       return (
-        <li
-          key={index}
-          icon={item.icon}
-          label={item.text}
-          onClick={() => setActiveButton(index)}
-          className={listItemStyle(index)}
-        >
-          <item.icon fontSize="small" className="mr-2" />
-          <Link to={item.path}>{item.text}</Link>
+        <li key={index} className={listItemStyle(item.path)}>
+          <Link className="grow" to={item.path}>
+            <item.icon fontSize="small" className="mr-2" />
+            <span
+              className={clsx(
+                "hidden min-md:inline",
+                collapseMenu && "!hidden"
+              )}
+            >
+              {item.text}
+            </span>
+          </Link>
         </li>
       );
     });
   }
 
   return (
-    <aside className="h-[100svh] p-3 shadow-sm" style={asideStyle}>
+    <aside className={asideStyle}>
       <Link to="/" className=" py-8 border-b border-[#94a3d465] block">
-        <img src={Logo} alt="logo" className="w-30 mx-auto" />
+        <img
+          src={Logo}
+          alt="logo"
+          className={clsx(
+            "mx-auto hidden min-md:block min-md:w-[120px]",
+            collapseMenu && "!hidden"
+          )}
+        />
+        <img
+          src={LogoSm}
+          alt="logo"
+          className={clsx(
+            "mx-auto w-[30px]  min-md:hidden",
+            collapseMenu && "!block"
+          )}
+        />
       </Link>
-      <ul className="flex flex-col gap-7 pt-8">{<MenuItems />}</ul>
+      <ul className="flex flex-col gap-7 pt-8">
+        <MenuItems />
+      </ul>
     </aside>
   );
 }

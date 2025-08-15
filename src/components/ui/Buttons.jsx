@@ -1,6 +1,6 @@
 import clsx from "clsx";
 
-export function Button({ title, color, children, style }) {
+export function Button({ title, color, children, style, type = "button" }) {
   const buttonStyle = clsx(
     "min-w-[40px] h-[40px] rounded flex items-center justify-center duration-200 px-3 text-sm rounded-sm gap-2",
     color === "blue" &&
@@ -14,7 +14,7 @@ export function Button({ title, color, children, style }) {
     style
   );
   return (
-    <button className={buttonStyle}>
+    <button className={buttonStyle} type={type}>
       {children}
       {!!title && title}
     </button>

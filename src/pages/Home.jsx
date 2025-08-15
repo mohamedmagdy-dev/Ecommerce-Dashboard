@@ -41,6 +41,7 @@ export default function Home() {
 
       {/* Row 2 */}
       <StatueCards />
+      {/* Row 3 */}
       {/* <RecentActivity /> */}
     </PageWrapper>
   );

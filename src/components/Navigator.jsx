@@ -79,7 +79,7 @@ export default function Navigator({ collapseMenu }) {
   ];
 
   const asideStyle = clsx(
-    "h-[100svh] p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto fixed top-0 left-0",
+    "h-[100vh] p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto fixed top-0 left-0",
     themeMode === "light"
       ? "bg-[var(--color-primary-light)]"
       : "bg-[var(--color-primary-dark)]",

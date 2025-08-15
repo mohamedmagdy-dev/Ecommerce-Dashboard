@@ -51,7 +51,7 @@ export default function StatueCards() {
   useEffect(() => {
     async function getStatusInfo() {
       try {
-        const response = await axios.get("/public/Api/summaryStats.json");
+        const response = await axios.get("/Api/summaryStats.json");
         setStatueInfo(response.data);
         setIsLoading(false);
       } catch (err) {
@@ -62,7 +62,7 @@ export default function StatueCards() {
     }
     getStatusInfo();
   }, []);
-  console.log(statueInfo);
+
   return (
     <div>
       {!isLoading && (

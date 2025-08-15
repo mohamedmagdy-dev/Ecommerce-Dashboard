@@ -10,7 +10,7 @@ export default function ApplicationBar({ handleCollapseMenu, collapseMenu }) {
                 focus:ring-gray-200 
                  dark:hover:bg-[var(--color-primary-dark)] dark:focus:ring-[var(--color-primary-dark)]`;
   return (
-    <nav className=" sticky top-0 w-full h-fit shadow-sm  bg-white dark:bg-[var(--color-secondary-900)] dark:border-gray-700">
+    <nav className=" sticky top-0 z-2 w-full h-fit shadow-sm  bg-white dark:bg-[var(--color-secondary-900)] dark:border-gray-700">
       <div className=" p-3  flex items-center gap-4">
         <button
           onClick={() => handleCollapseMenu()}

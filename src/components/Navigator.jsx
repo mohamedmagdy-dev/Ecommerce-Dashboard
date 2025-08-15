@@ -17,13 +17,12 @@ import SettingsAccessibilityIcon from "@mui/icons-material/SettingsAccessibility
 import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
-import { useSelector } from "react-redux";
 // clsx
 import clsx from "clsx";
 
 export default function Navigator({ collapseMenu }) {
   const location = useLocation();
-  const { themeMode } = useSelector((state) => state.theme);
+
   const menuItems = [
     {
       text: "Dashboard",
@@ -79,10 +78,7 @@ export default function Navigator({ collapseMenu }) {
   ];
 
   const asideStyle = clsx(
-    "h-[100vh] p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto fixed top-0 left-0",
-    themeMode === "light"
-      ? "bg-[var(--color-primary-light)]"
-      : "bg-[var(--color-primary-dark)]",
+    "h-[100vh] p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto fixed top-0 left-0  dark:bg-[var(--color-primary-dark)] bg-[var(--color-primary-light)]",
     collapseMenu && "!min-w-[54px] !max-w-[54px]"
   );
 
@@ -92,7 +88,8 @@ export default function Navigator({ collapseMenu }) {
         ? "!text-[var(--color-text-500)] "
         : "text-[var(--color-text-700)] "
     } 
-    flex
+   ${collapseMenu && "text-center"}
+   flex
     `;
   };
 
@@ -101,7 +98,7 @@ export default function Navigator({ collapseMenu }) {
       return (
         <li key={index} className={listItemStyle(item.path)}>
           <Link
-            className={clsx("min-md:grow ", collapseMenu && "text-center")}
+            className={clsx("grow")}
             to={item.path}
           >
             <item.icon

@@ -79,15 +79,15 @@ export default function Navigator({ collapseMenu }) {
   ];
 
   const asideStyle = clsx(
-    "h-[100svh] p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto",
+    "h-[100svh] p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto fixed top-0 left-0",
     themeMode === "light"
       ? "bg-[var(--color-primary-light)]"
       : "bg-[var(--color-primary-dark)]",
-    collapseMenu && "!w-fit"
+    collapseMenu && "!min-w-[54px] !max-w-[54px]"
   );
 
   const listItemStyle = (path) => {
-    return `duration-200 text-md  dark:text-[var(--color-text-800)] hover:text-[var(--color-text-500)]  ${
+    return `duration-200 text-md dark:text-[var(--color-text-800)] hover:text-[var(--color-text-500)]  ${
       location.pathname === path
         ? "!text-[var(--color-text-500)] "
         : "text-[var(--color-text-700)] "
@@ -100,8 +100,14 @@ export default function Navigator({ collapseMenu }) {
     return menuItems.map((item, index) => {
       return (
         <li key={index} className={listItemStyle(item.path)}>
-          <Link className="grow" to={item.path}>
-            <item.icon fontSize="small" className="mr-2" />
+          <Link
+            className={clsx("min-md:grow ", collapseMenu && "text-center")}
+            to={item.path}
+          >
+            <item.icon
+              fontSize="small"
+              className={clsx("min-md:mr-2", collapseMenu && "!mr-0")}
+            />
             <span
               className={clsx(
                 "hidden min-md:inline",

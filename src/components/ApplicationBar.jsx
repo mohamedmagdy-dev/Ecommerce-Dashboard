@@ -1,6 +1,6 @@
 import MenuIcon from "@mui/icons-material/Menu";
 export default function ApplicationBar({ handleCollapseMenu, collapseMenu }) {
-  const iconStyle = `hidden min-md:inline-flex cursor-pointer
+  const buttonStyle = `hidden min-md:inline-flex cursor-pointer
             duration-200
               items-center 
              justify-center p-2 w-10 h-10 
@@ -10,13 +10,12 @@ export default function ApplicationBar({ handleCollapseMenu, collapseMenu }) {
                 focus:ring-gray-200 
                  dark:hover:bg-[var(--color-primary-dark)] dark:focus:ring-[var(--color-primary-dark)]`;
   return (
-    <nav className=" h-fit shadow-sm  bg-white dark:bg-[var(--color-secondary-900)] dark:border-gray-700">
+    <nav className=" sticky top-0 w-full h-fit shadow-sm  bg-white dark:bg-[var(--color-secondary-900)] dark:border-gray-700">
       <div className=" p-3  flex items-center gap-4">
         <button
           onClick={() => handleCollapseMenu()}
-          // data-collapse-toggle="navbar-hamburger"
           type="button"
-          className={iconStyle}
+          className={buttonStyle}
           aria-controls="navbar-hamburger"
           aria-expanded={collapseMenu ? "false" : "true"}
         >

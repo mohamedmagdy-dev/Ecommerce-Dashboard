@@ -3,7 +3,7 @@ import { useSelector } from "react-redux";
 // components
 import RecentActivity from "../components/RecentActivity";
 import DatePicker from "../components/ui/DatePicker";
-import { GreenButton, BlueButton } from "../components/ui/Buttons";
+import { Button } from "../components/ui/Buttons";
 import PageWrapper from "../components/PageWrapper";
 import StatueCards from "../components/StatueCards";
 // Icons
@@ -29,12 +29,12 @@ export default function Home() {
         <div className="flex items-center gap-5 flex-wrap ">
           <DatePicker />
           <div className="flex gap-5">
-            <GreenButton title="Add Product">
+            <Button title="Add Product" color="green" style="cursor-pointer">
               <LibraryAddIcon fontSize="" />
-            </GreenButton>
-            <BlueButton>
+            </Button>
+            <Button color="blue" style="cursor-pointer">
               <MicrowaveIcon fontSize="small" />
-            </BlueButton>
+            </Button>
           </div>
         </div>
       </div>

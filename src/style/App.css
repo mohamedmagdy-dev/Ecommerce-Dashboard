@@ -21,13 +21,17 @@ body {
 
   --color-green: #0bb39c;
   --color-lightGreen: #daf5f1;
+  --color-darkGreen: #1d3b3b;
 
   --color-blue: #2a9ddb;
   --color-lightBlue: #def0fa;
+  --color-darkBlue: #223745;
 
   --color-orange: #f7b84a;
   --color-lightOrange: #fff5e6;
+  --color-darkOrange: #40392d;
 
   --color-purple: #41528a;
   --color-lightPurple: #e1e4ed;
+  --color-darkPurple: #272c38;
 }

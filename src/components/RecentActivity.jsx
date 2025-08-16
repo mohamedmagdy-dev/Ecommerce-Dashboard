@@ -20,10 +20,10 @@ export default function RecentActivity() {
 
   function AllActivates() {
     return (
-      <ol className="mx-3 relative border-s border-dashed border-gray-200 dark:border-gray-700">
+      <ol className="mx-3 relative border-s flex flex-col gap-8 border-dashed border-gray-200 dark:border-gray-700">
         {activates.map((activate, index) => {
           return (
-            <li key={index} className="mb-10 ms-5">
+            <li key={index} className=" ms-5">
               <span className="absolute  flex items-center justify-center w-6 h-6 rounded-full -start-3 ">
                 <img
                   src={activate.userAvatar}
@@ -47,7 +47,7 @@ export default function RecentActivity() {
     );
   }
   return (
-    <div className="h-[400px] overflow-y-auto mb-5">
+    <div className="h-[400px] overflow-y-auto ">
 
       {!isLoading && <AllActivates />}
     </div>

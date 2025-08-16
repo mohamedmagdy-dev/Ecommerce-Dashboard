@@ -2,6 +2,7 @@
 import { useState } from "react";
 import ApplicationBar from "../components/ApplicationBar";
 import Navigator from "../components/Navigator";
+import Footer from "../components/Footer";
 import clsx from "clsx";
 
 export default function DashboardLayoutBasic({ children }) {
@@ -24,6 +25,7 @@ export default function DashboardLayoutBasic({ children }) {
           collapseMenu={collapseMenu}
         />
         <div>{children}</div>
+        <Footer />
       </div>
     </div>
   );

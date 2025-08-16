@@ -20,7 +20,7 @@ export default function TopCategories() {
   }, []);
 
   return (
-    <div className="mt-3">
+    <div className="mt-3 mb-8 ">
       <ol>
         {!isLoading &&
           categories.map((category, index) => {

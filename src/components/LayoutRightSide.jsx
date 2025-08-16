@@ -5,6 +5,7 @@ import TopCategories from "./TopCategories";
 import H3 from "./ui/Titles";
 import ProductReviews from "./ProductReviews";
 import CustomerReviews from "./CustomerReviews";
+import ReferBox from "./ReferBox";
 export default function LayoutRightSide({ toggleRightMenu, toggleRMenuFun }) {
   const layoutStyle = clsx(
     `p-3 pb-8 shadow-sm  max-md:w-[calc(100%-54px)] 
@@ -33,6 +34,7 @@ export default function LayoutRightSide({ toggleRightMenu, toggleRMenuFun }) {
         <ProductReviews />
         <H3 title="Customer Reviews" />
         <CustomerReviews />
+        <ReferBox />
       </div>
     );
   }

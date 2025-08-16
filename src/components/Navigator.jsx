@@ -89,7 +89,8 @@ export default function Navigator({ collapseMenu }) {
         : "text-[var(--color-text-700)] "
     } 
    ${collapseMenu && "text-center"}
-   flex
+   max-md:text-center
+   min-md:flex
     `;
   };
 
@@ -97,10 +98,7 @@ export default function Navigator({ collapseMenu }) {
     return menuItems.map((item, index) => {
       return (
         <li key={index} className={listItemStyle(item.path)}>
-          <Link
-            className={clsx("grow")}
-            to={item.path}
-          >
+          <Link className={clsx("min-md:grow")} to={item.path}>
             <item.icon
               fontSize="small"
               className={clsx("min-md:mr-2", collapseMenu && "!mr-0")}

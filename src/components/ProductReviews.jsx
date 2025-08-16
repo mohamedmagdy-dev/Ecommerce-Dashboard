@@ -20,13 +20,13 @@ export default function ProductReviews() {
   }, []);
 
   return (
-    <div className="flex flex-col gap-5 h-[300px] overflow-y-auto">
+    <div className="flex flex-col gap-5 h-[300px] overflow-y-auto pr-3">
       {!isLoading &&
         reviews.map((category) => {
           return (
             <div
               key={category.id}
-              className="p-3 flex flex-col items-center text-center justify-center border border-dashed border-gray-200 rounded-lg  dark:border-gray-700"
+              className="p-1 flex flex-col items-center text-center justify-center border border-dashed border-gray-200 rounded-lg  dark:border-gray-700"
             >
               <img src={category.userAvatar} alt="avatar" />
 

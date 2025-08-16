@@ -26,11 +26,11 @@ export default function ProductReviews() {
           return (
             <div
               key={category.id}
-              className="p-1 flex flex-col items-center text-center justify-center border border-dashed border-gray-200 rounded-lg  dark:border-gray-700"
+              className="p-2 flex flex-col items-center text-center justify-center border border-dashed border-gray-200 rounded-lg  dark:border-gray-700"
             >
               <img src={category.userAvatar} alt="avatar" />
 
-              <h5 className="mb-1 text-sm font-semibold tracking-tight text-gray-900 dark:text-white">
+              <h5 className=" text-sm font-semibold tracking-tight text-gray-900 dark:text-white">
                 {category.userName}
               </h5>
               <Rate rate={category.rating} />

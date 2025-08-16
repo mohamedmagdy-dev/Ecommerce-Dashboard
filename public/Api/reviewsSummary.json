@@ -1,0 +1,40 @@
+{
+  "rating": 4.5,
+  "totalReviews": 5453,
+  "breakdown": [
+    {
+      "name": "5 star",
+      "count": 2758,
+      "percentage": 50.61,
+      "color": "#41528a"
+    },
+    {
+      "name": "4 star",
+
+      "count": 1063,
+      "percentage": 19.49,
+      "color": "#0bb39c"
+    },
+    {
+      "name": "3 star",
+
+      "count": 997,
+      "percentage": 18.29,
+      "color": "#2a9ddb"
+    },
+    {
+      "name": "2 star",
+
+      "count": 227,
+      "percentage": 4.16,
+      "color": "#f7b84a"
+    },
+    {
+      "name": "1 star",
+
+      "count": 408,
+      "percentage": 7.48,
+      "color": "#f06448"
+    }
+  ]
+}

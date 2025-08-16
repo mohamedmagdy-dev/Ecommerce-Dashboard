@@ -1,5 +1,3 @@
-// redux
-import { useSelector } from "react-redux";
 // components
 import LayoutRightSide from "../components/LayoutRightSide";
 import DatePicker from "../components/ui/DatePicker";
@@ -9,15 +7,13 @@ import StatueCards from "../components/StatueCards";
 // Icons
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import MicrowaveIcon from "@mui/icons-material/Microwave";
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 export default function Home() {
-
   const [toggleRightMenu, setToggleRightMenu] = useState(false);
   function toggleRMenuFun() {
     setToggleRightMenu((prev) => !prev);
   }
-
 
   return (
     <PageWrapper className="flex">

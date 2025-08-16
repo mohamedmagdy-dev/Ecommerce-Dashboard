@@ -1,5 +1,4 @@
 import { useEffect, useState } from "react";
-import H3 from "./ui/Titles";
 import axios from "axios";
 export default function RecentActivity() {
   const [activates, setActivates] = useState([]);
@@ -8,11 +7,11 @@ export default function RecentActivity() {
   useEffect(() => {
     async function getActivates() {
       try {
-        const response = await axios.get("/public/Api/RecentActivity.json");
+        const response = await axios.get("/Api/RecentActivity.json");
         setActivates(response.data);
         setIsLoading(false);
       } catch (err) {
-        console.log(err);
+        console.log(err)
         setIsLoading(true);
       }
     }
@@ -48,8 +47,8 @@ export default function RecentActivity() {
     );
   }
   return (
-    <div className="h-[400px] overflow-y-auto">
-      <H3 title="Recent Activity" />
+    <div className="h-[400px] overflow-y-auto mb-5">
+
       {!isLoading && <AllActivates />}
     </div>
   );

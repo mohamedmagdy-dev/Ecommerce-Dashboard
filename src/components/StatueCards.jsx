@@ -30,7 +30,7 @@ export default function StatueCards() {
 
   function Cards() {
     return (
-      <div className="flex justify-between gap-8 flex-wrap mb-5">
+      <div className="flex justify-between gap-5 flex-wrap mb-5">
         <StatueCard
           title="Total Earnings"
           rate={statueInfo.totalEarnings.rate}

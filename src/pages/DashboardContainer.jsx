@@ -12,11 +12,11 @@ export default function DashboardLayoutBasic({ children }) {
     setCollapseMenu((prev) => !prev);
   }
   return (
-    <div className="flex">
+    <div>
       <Navigator collapseMenu={collapseMenu} />
       <div
         className={clsx(
-          "grow ml-[54px] min-md:ml-[240px]",
+          "grow ml-[54px] min-md:ml-[240px] ",
           collapseMenu && "!ml-[54px]"
         )}
       >
@@ -24,7 +24,7 @@ export default function DashboardLayoutBasic({ children }) {
           handleCollapseMenu={handleCollapseMenu}
           collapseMenu={collapseMenu}
         />
-        <div>{children}</div>
+        {children}
         <Footer />
       </div>
     </div>

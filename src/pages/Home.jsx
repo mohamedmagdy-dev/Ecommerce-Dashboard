@@ -8,7 +8,6 @@ import StatueCards from "../components/StatueCards";
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import MicrowaveIcon from "@mui/icons-material/Microwave";
 import { useState } from "react";
-
 export default function Home() {
   const [toggleRightMenu, setToggleRightMenu] = useState(false);
   function toggleRMenuFun() {
@@ -16,8 +15,8 @@ export default function Home() {
   }
 
   return (
-    <PageWrapper className="flex">
-      <div className="p-5 grow">
+    <PageWrapper className="flex ">
+      <div className="p-5 grow w-full ">
         {/* Row 1*/}
         <div className="flex justify-between flex-wrap gap-5 mb-5">
           {/* Hello Text */}
@@ -50,6 +49,7 @@ export default function Home() {
         {/* Row 2 */}
         <StatueCards />
         {/* Row 3 */}
+
       </div>
       <LayoutRightSide
         toggleRightMenu={toggleRightMenu}

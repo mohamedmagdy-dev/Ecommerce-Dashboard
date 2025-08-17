@@ -15,6 +15,7 @@ import SellersDetails from "./pages/SellersDetails";
 import ShoppingCart from "./pages/ShoppingCart";
 import OrderDetails from "./pages/OrderDetails";
 import Page404 from "./pages/Page404";
+// import Test from "./pages/Test";
 import DashboardContainer from "./pages/DashboardContainer";
 
 // Components
@@ -39,6 +40,7 @@ export default function App() {
           <Route path="/SellersDetails" element={<SellersDetails />} />
           <Route path="/ShoppingCart" element={<ShoppingCart />} />
           <Route path="/OrderDetails" element={<OrderDetails />} />
+          {/* <Route path="/test" element={<Test />} /> */}
           <Route path="/*" element={<Page404 />} />
         </Routes>
         {/* Routes */}

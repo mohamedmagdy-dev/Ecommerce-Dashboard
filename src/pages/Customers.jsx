@@ -9,7 +9,7 @@ import DatePicker from "../components/ui/DatePicker";
 // Axios
 import axios from "axios";
 import { useEffect, useState, useMemo } from "react";
-
+import AddToDriveIcon from "@mui/icons-material/AddToDrive";
 export default function Customers() {
   const [customers, setCustomers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
@@ -42,7 +42,7 @@ export default function Customers() {
       <div className="p-3">
         <div className="flex flex-wrap justify-between items-center pb-2 mb-5 border-b border-[#94a3d465] border-dashed">
           <H3 title="Customer List" style="text-xl" />
-          <div>
+          <div className="max-sm:flex max-sm:justify-between max-sm:items-center max-sm:w-full ">
             <button
               type="button"
               className="py-2.5 mr-2 px-5 rounded-sm font-bold cursor-pointer text-sm text-white bg-[#0bb39c]"
@@ -54,17 +54,28 @@ export default function Customers() {
               type="button"
               className="py-2.5 px-5 rounded-sm font-bold cursor-pointer text-sm text-white bg-[#2a9ddb]"
             >
+              <AddToDriveIcon fontSize="small" className="mr-2" />
               Import
             </button>
           </div>
         </div>
-        <div className="flex gap-3">
+        <div className="flex flex-wrap gap-3">
           <input
-            className="grow rounded-sm p-2 text-sm outline-none border border-[#94a3d465]"
+            className="grow rounded-sm p-2  flex-1/2 text-sm outline-none border border-[#94a3d465] dark:text-[var(--color-text-500)]"
             type="text"
             placeholder="Search for customer, email, phone, status or something..."
           />
-          <DatePicker />
+          <DatePicker style="flex-1/3" />
+
+          <select
+            id="countries"
+            className="bg-gray-50 border flex-1/3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+          >
+            <option value="">Choose a Status</option>
+            <option value="All">All</option>
+            <option value="Active">Active</option>
+            <option value="Inactive">InActive</option>
+          </select>
         </div>
       </div>
     );

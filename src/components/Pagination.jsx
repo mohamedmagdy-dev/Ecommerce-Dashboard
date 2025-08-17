@@ -15,7 +15,7 @@ export default function Pagination({
   };
 
   return (
-    <div className="flex gap-2 flex-wrap my-10  w-fit ">
+    <div className="flex gap-2 flex-wrap   w-fit justify-center px-3 py-8">
       <button
         onClick={() => handlePageChange(currentPage - 1)}
         disabled={currentPage === 1}

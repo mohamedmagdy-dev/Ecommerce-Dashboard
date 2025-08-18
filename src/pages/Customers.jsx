@@ -1,20 +1,30 @@
+// components
 import PageWrapper from "../components/PageWrapper";
 import Table from "../components/Tables";
+import { Button } from "../components/ui/Buttons";
+import DatePicker from "../components/ui/DatePicker";
+import H3 from "../components/ui/Titles";
+import ConfirmDialog from "../components/ConfirmDialog";
+import SuccessAlert from "../components/SuccessAlert";
+import CustomerEditForm from "../components/CustomerEditForm";
+// Icons
 import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
 import AddIcon from "@mui/icons-material/Add";
 import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
-import { Button } from "../components/ui/Buttons";
-import H3 from "../components/ui/Titles";
-import DatePicker from "../components/ui/DatePicker";
+import AddToDriveIcon from "@mui/icons-material/AddToDrive";
 // Axios
 import axios from "axios";
 import { useEffect, useState, useMemo } from "react";
-import AddToDriveIcon from "@mui/icons-material/AddToDrive";
 export default function Customers() {
   const [customers, setCustomers] = useState([]);
   const [isLoading, setIsLoading] = useState(true);
   const [currentPage, setCurrentPage] = useState(1);
-
+  const [toggleConfirmDialog, setToggleConfirmDialog] = useState(false);
+  const [toggleEditDialog, setToggleEditDialog] = useState(false);
+  const [selectedCustomer, setSelectedCustomer] = useState({});
+  const [showAlert, setShowAlert] = useState(false);
+  const [actionType, setActionType] = useState("");
+  const [alertMsg, setAlertMsg] = useState("");
   const displayedProducts = useMemo(() => {
     const startIndex = (currentPage - 1) * 15;
     const endIndex = startIndex + 15;
@@ -44,6 +54,12 @@ export default function Customers() {
           <H3 title="Customer List" style="text-xl" />
           <div className="max-sm:flex max-sm:justify-between max-sm:items-center max-sm:w-full ">
             <button
+              onClick={() => {
+                setSelectedCustomer(null);
+                setActionType("add");
+                setToggleEditDialog(true);
+                setAlertMsg("Add New Customer Successful");
+              }}
               type="button"
               className="py-2.5 mr-2 px-5 rounded-sm font-bold cursor-pointer text-sm text-white bg-[#0bb39c]"
             >
@@ -59,9 +75,9 @@ export default function Customers() {
             </button>
           </div>
         </div>
-        <div className="flex flex-wrap gap-3">
+        <div className="flex max-lg:flex-wrap gap-3">
           <input
-            className="grow rounded-sm p-2  flex-1/2 text-sm outline-none border border-[#94a3d465] dark:text-[var(--color-text-500)]"
+            className=" rounded-sm p-2  flex-1/2 text-sm outline-none border border-[#94a3d465] dark:text-[var(--color-text-500)]"
             type="text"
             placeholder="Search for customer, email, phone, status or something..."
           />
@@ -69,7 +85,7 @@ export default function Customers() {
 
           <select
             id="countries"
-            className="bg-gray-50 border flex-1/3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            className="bg-gray-50 border flex-1/3 border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block  p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
           >
             <option value="">Choose a Status</option>
             <option value="All">All</option>
@@ -81,11 +97,56 @@ export default function Customers() {
     );
   }
 
-  function handelEditCustomer(customerData) {
-    console.log(customerData);
+  // About Action Button
+
+  function handelDleClick(customerData) {
+    setToggleConfirmDialog(true);
+    setSelectedCustomer(customerData);
   }
-  function handelDeleteCustomer(customerData) {
-    console.log(customerData);
+
+  function handelEditClick(customerData) {
+    setToggleEditDialog(true);
+    setSelectedCustomer(customerData);
+  }
+
+  // About Close Dialog
+  function handelCloseConfirmDialog() {
+    setToggleConfirmDialog(false);
+  }
+  function handelCloseEditDialog() {
+    setToggleEditDialog(false);
+  }
+
+  // The Main Logic Of Action
+  function handelEditCustomer(newData) {
+    const updatedCustomers = customers.map((customer) => {
+      if (customer.customerId === selectedCustomer.customerId) {
+        return { ...newData, customerId: selectedCustomer.customerId };
+      } else {
+        return customer;
+      }
+    });
+    setCustomers(updatedCustomers);
+    handelCloseEditDialog();
+    setShowAlert(true);
+  }
+
+  function handelAddCustomer(newData) {
+    setCustomers((prev) => [
+      { ...newData, customerId: new Date().setSeconds() },
+      ...prev,
+    ]);
+    handelCloseEditDialog();
+    setShowAlert(true);
+  }
+
+  function handelDeleteCustomer() {
+    const finaleCustomersList = customers.filter((customer) => {
+      return customer.customerId !== selectedCustomer.customerId;
+    });
+    setCustomers(finaleCustomersList);
+    handelCloseConfirmDialog();
+    setShowAlert(true);
   }
 
   function TableRows() {
@@ -135,13 +196,20 @@ export default function Customers() {
                 <td className="px-6 py-4   items-center text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] text-right">
                   <div className="flex gap-2">
                     <button
-                      onClick={() => handelEditCustomer(customer)}
+                      onClick={() => {
+                        setActionType("edit");
+                        handelEditClick(customer);
+                        setAlertMsg("Update Customer Info Successful");
+                      }}
                       className="text-[#41528a] cursor-pointer"
                     >
                       <EditOutlinedIcon fontSize="small" />
                     </button>
                     <button
-                      onClick={() => handelDeleteCustomer(customer)}
+                      onClick={() => {
+                        handelDleClick(customer);
+                        setAlertMsg("Delete Customer Info Successful");
+                      }}
                       className="text-red-600 cursor-pointer"
                     >
                       <DeleteForeverOutlinedIcon fontSize="small" />
@@ -155,7 +223,7 @@ export default function Customers() {
     );
   }
   return (
-    <PageWrapper className="p-5">
+    <PageWrapper className="p-5 ">
       <Table
         thead={[
           "Customer",
@@ -176,6 +244,31 @@ export default function Customers() {
       >
         {!isLoading && <TableRows />}
       </Table>
+      {/*Confirm Delete Dialog  */}
+      {toggleConfirmDialog && (
+        <ConfirmDialog
+          desc="Are you sure you want to delete this Customer?"
+          closeDialog={handelCloseConfirmDialog}
+          action={handelDeleteCustomer}
+        />
+      )}
+      {/*Edit Customer Dialog  */}
+      {toggleEditDialog && (
+        <CustomerEditForm
+          closeForm={handelCloseEditDialog}
+          action={
+            actionType === "edit" ? handelEditCustomer : handelAddCustomer
+          }
+          formBehavior={actionType}
+          customerData={selectedCustomer}
+        />
+      )}
+      {/* Success Alert */}
+      <SuccessAlert
+        show={showAlert}
+        msg={alertMsg}
+        onClose={() => setShowAlert(false)}
+      />
     </PageWrapper>
   );
 }

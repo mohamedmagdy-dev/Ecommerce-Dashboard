@@ -9,7 +9,7 @@ import ReferBox from "./ReferBox";
 export default function LayoutRightSide({ toggleRightMenu, toggleRMenuFun }) {
   const layoutStyle = clsx(
     `px-5 pt-3 pb-8 shadow-sm  max-md:w-[calc(100%-54px)] 
-    min-md:min-w-[240px] min-md:max-w-[240px] border-l border-white 
+    min-md:min-w-[300px] min-md:max-w-[300px] border-l border-white 
     dark:border-[#94a3d465] overflow-y-auto bg-white fixed 
     dark:bg-[var(--color-primary-dark)] min-md:sticky max-md:h-[calc(100vh-54px)] min-md:top-0
      right-0 duration-200 max-md:transform max-md:translate-x-[100%] `,

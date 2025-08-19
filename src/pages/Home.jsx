@@ -10,6 +10,7 @@ import MicrowaveIcon from "@mui/icons-material/Microwave";
 import { useState } from "react";
 export default function Home() {
   const [toggleRightMenu, setToggleRightMenu] = useState(false);
+
   function toggleRMenuFun() {
     setToggleRightMenu((prev) => !prev);
   }
@@ -49,7 +50,6 @@ export default function Home() {
         {/* Row 2 */}
         <StatueCards />
         {/* Row 3 */}
-
       </div>
       <LayoutRightSide
         toggleRightMenu={toggleRightMenu}

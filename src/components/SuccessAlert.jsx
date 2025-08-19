@@ -16,7 +16,7 @@ export default function SuccessAlert({ show, onClose, msg }) {
           setVisible(false);
           onClose();
         }, 300);
-      }, 2000);
+      }, 700);
 
       return () => clearTimeout(timer);
     }
@@ -25,7 +25,7 @@ export default function SuccessAlert({ show, onClose, msg }) {
   if (!visible) return null;
 
   return (
-    <div className="fixed inset-0 flex justify-center items-center z-50">
+    <div className="fixed inset-0 flex justify-center items-center z-3">
       <div className="absolute inset-0 bg-[#1b1b1b4b] dark:bg-[#302f2f59]"></div>
 
       <div

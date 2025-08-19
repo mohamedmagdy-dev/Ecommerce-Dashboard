@@ -350,7 +350,7 @@ function TopTable({
           }}
           className=" rounded-sm p-2  flex-1/2 text-sm outline-none border border-[#94a3d465] dark:text-[var(--color-text-500)]"
           type="text"
-          placeholder="Search for customer, email, phone, status or something..."
+          placeholder="Search for customer, email, phone or something..."
         />
         <DatePicker style="flex-1/3" getDate={getDate} />
 

@@ -48,7 +48,6 @@ export default function Orders() {
     async function getOrders() {
       try {
         const response = await axios.get("/Api/Orders.json");
-        console.log(response.data);
         setOrders(response.data);
         setIsLoading(false);
       } catch (err) {
@@ -123,7 +122,7 @@ export default function Orders() {
         order.customer.name
           .toLowerCase()
           .includes(searchFilter.trim().toLowerCase()) ||
-        order.orderId
+        String(order.orderId)
           .toLowerCase()
           .includes(searchFilter.trim().toLowerCase()) ||
         order.productName

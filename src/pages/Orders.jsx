@@ -113,7 +113,7 @@ export default function Orders() {
   useEffect(() => {
     const date = dateFilter.split("-").join("/");
     const searchedOrders = orders.filter((order) => {
-      const dateMatch = date === "" || date === order.joiningDate;
+      const dateMatch = date === "" || date === order.createAt;
       const statusMatch =
         statusFilter === "All" || order.status === statusFilter;
       const paymentMatch =

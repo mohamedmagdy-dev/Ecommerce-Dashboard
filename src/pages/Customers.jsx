@@ -234,17 +234,15 @@ export default function Customers() {
   return (
     <PageWrapper className="p-5 ">
       <div className="bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm">
-        {!!TopTable && (
-          <TopTable
-            getStatusValue={getStatusValue}
-            getSearchValue={getSearchValue}
-            setSelectedCustomer={setSelectedCustomer}
-            setActionType={setActionType}
-            setToggleEditDialog={setToggleEditDialog}
-            setAlertMsg={setAlertMsg}
-            getDateFilter={getDateFilter}
-          />
-        )}
+        <TopTable
+          getStatusValue={getStatusValue}
+          getSearchValue={getSearchValue}
+          setSelectedCustomer={setSelectedCustomer}
+          setActionType={setActionType}
+          setToggleEditDialog={setToggleEditDialog}
+          setAlertMsg={setAlertMsg}
+          getDateFilter={getDateFilter}
+        />
 
         {!isLoading && (
           <Table

@@ -272,18 +272,16 @@ export default function Orders() {
   return (
     <PageWrapper className="p-5 ">
       <div className="bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm">
-        {!!TopTable && (
-          <TopTable
-            getStatusValue={getStatusValue}
-            getPaymentValue={getPaymentValue}
-            getSearchValue={getSearchValue}
-            setSelectedOrder={setSelectedOrder}
-            setActionType={setActionType}
-            setToggleEditDialog={setToggleEditDialog}
-            setAlertMsg={setAlertMsg}
-            getDateFilter={getDateFilter}
-          />
-        )}
+        <TopTable
+          getStatusValue={getStatusValue}
+          getPaymentValue={getPaymentValue}
+          getSearchValue={getSearchValue}
+          setSelectedOrder={setSelectedOrder}
+          setActionType={setActionType}
+          setToggleEditDialog={setToggleEditDialog}
+          setAlertMsg={setAlertMsg}
+          getDateFilter={getDateFilter}
+        />
 
         {!isLoading && (
           <Table

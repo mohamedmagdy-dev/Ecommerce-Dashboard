@@ -21,8 +21,8 @@ export default function Pagination({
         disabled={currentPage === 1}
         className={clsx(
           "cursor-pointer px-4  mr-2 border select-none border-[var(--color-primary-light)]  rounded-sm",
-          currentPage === 1
-            ? "opacity-55  dark:text-gray-200"
+          currentPage === 1 || totalItems === 0
+            ? "opacity-55  dark:text-gray-200 !cursor-default"
             : "text-[#41528a]",
           currentPage !== 1 && "cursor-pointer"
         )}
@@ -50,8 +50,8 @@ export default function Pagination({
         disabled={currentPage === totalPages}
         className={clsx(
           " px-4  ml-2 border select-none border-[var(--color-primary-light)]  rounded-sm",
-          currentPage === totalPages
-            ? "opacity-55 dark:text-gray-200"
+          currentPage === totalPages || totalItems === 0
+            ? "opacity-55 dark:text-gray-200 !cursor-default"
             : "text-[#41528a]",
           currentPage !== totalPages && "cursor-pointer"
         )}

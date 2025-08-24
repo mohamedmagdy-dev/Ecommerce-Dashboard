@@ -1,128 +1,286 @@
-import ProductsTable from "../components/Tables";
+// components
+import PageWrapper from "../components/PageWrapper";
+import Table from "../components/Tables";
+import { Button } from "../components/ui/Buttons";
+import ConfirmDialog from "../components/ConfirmDialog";
+import SuccessAlert from "../components/SuccessAlert";
+import Pagination from "../components/Pagination";
+import NoResult from "../components/NoResult";
 
+// Icons
+import DeleteForeverOutlinedIcon from "@mui/icons-material/DeleteForeverOutlined";
+import AddIcon from "@mui/icons-material/Add";
+import EditOutlinedIcon from "@mui/icons-material/EditOutlined";
+import RemoveRedEyeIcon from "@mui/icons-material/RemoveRedEye";
+import StarIcon from "@mui/icons-material/Star";
+// Axios
+import axios from "axios";
+import { useEffect, useState, useMemo } from "react";
+import { Link } from "react-router-dom";
+import clsx from "clsx";
 export default function Products() {
+  const [products, setProducts] = useState([]);
+  const [isLoading, setIsLoading] = useState(false);
+  const [currentPage, setCurrentPage] = useState(1);
+  const [toggleConfirmDialog, setToggleConfirmDialog] = useState(false);
+  const [showAlert, setShowAlert] = useState(false);
+  const [searchFilter, setSearchFilter] = useState("");
+  const [selectedProduct, setSelectedProduct] = useState({});
+
+  const [filteredProducts, setFilteredProducts] = useState([]);
+
+  const displayedProducts = useMemo(() => {
+    const startIndex = (currentPage - 1) * 15;
+    const endIndex = startIndex + 15;
+    return filteredProducts.slice(startIndex, endIndex);
+  }, [currentPage, filteredProducts]);
+
+  useEffect(() => {
+    async function getProducts() {
+      try {
+        const response = await axios.get("/Api/Products.json");
+
+        setProducts(response.data);
+        setIsLoading(false);
+      } catch (err) {
+        console.log(err);
+        setIsLoading(true);
+      }
+    }
+
+    getProducts();
+  }, []);
+
+  // Handel Filter Logic
+  useEffect(() => {
+    const searchedProducts = products.filter((product) => {
+      const searchMatch = product.productName
+        .toLowerCase()
+        .includes(searchFilter.trim().toLowerCase());
+
+      return searchMatch;
+    });
+    setFilteredProducts(searchedProducts);
+    setCurrentPage(1);
+  }, [products, searchFilter]);
+
+  // About Action Button
+
+  function handelDleClick(customerData) {
+    setToggleConfirmDialog(true);
+    setSelectedProduct(customerData);
+  }
+
+  // About Close Dialog
+  function handelCloseConfirmDialog() {
+    setToggleConfirmDialog(false);
+  }
+
+  // The Main Logic Of Action
+  function handelDeleteProduct() {
+    const finaleProductsList = products.filter((product) => {
+      return product.productId !== selectedProduct.productId;
+    });
+
+    setProducts(finaleProductsList);
+    handelCloseConfirmDialog();
+    setShowAlert(true);
+  }
+
+  function getSearchValue(data) {
+    return setSearchFilter(data);
+  }
+
+  function TableRows() {
+    if (displayedProducts.length > 0) {
+      return (
+        <>
+          {!isLoading &&
+            displayedProducts.map((product) => {
+              return (
+                <tr
+                  key={product.productId}
+                  className="bg-white border-b dark:bg-[var(--color-secondary-900)] dark:border-gray-700 border-gray-200"
+                >
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]  whitespace-nowrap"
+                  >
+                    <div className="flex gap-2 items-center">
+                      <div className="w-12 h-12 p-2 bg-gray-200 rounded-sm">
+                        <img
+                          src={product.image}
+                          alt="product Image"
+                          className="w-full h-full"
+                        />
+                      </div>
+                      <div className="flex flex-col gap-1">
+                        <span>{product.productName}</span>
+                        <span className="text-gray-400 font-normal">
+                          Category : {product.category}
+                        </span>
+                      </div>
+                    </div>
+                  </th>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]  whitespace-nowrap"
+                  >
+                    {product.stock}
+                  </th>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]  whitespace-nowrap"
+                  >
+                    ${product.productPrice}
+                  </th>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]  whitespace-nowrap"
+                  >
+                    {product.productOrders}
+                  </th>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium  dark:text-[var(--color-text-500)]  whitespace-nowrap"
+                  >
+                    <StarIcon fontSize="small" className="text-amber-400" />
+                    {product.rate}
+                  </th>
+                  <th
+                    scope="row"
+                    className="px-6 py-4 font-medium text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]  whitespace-nowrap"
+                  >
+                    {product.createdAt}
+                  </th>
+                  <td className="px-6 py-4   items-center text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] text-right">
+                    <div className="flex gap-2">
+                      <Link
+                        to="/ProductDetails"
+                        className="text-[#41528a] cursor-pointer"
+                      >
+                        <RemoveRedEyeIcon fontSize="small" />
+                      </Link>
+
+                      <Link
+                        to="/CreateProduct"
+                        className="text-green-600 cursor-pointer"
+                      >
+                        <EditOutlinedIcon fontSize="small" />
+                      </Link>
+                      <button
+                        onClick={() => {
+                          handelDleClick(product);
+                        }}
+                        className="text-red-600 cursor-pointer"
+                      >
+                        <DeleteForeverOutlinedIcon fontSize="small" />
+                      </button>
+                    </div>
+                  </td>
+                </tr>
+              );
+            })}
+        </>
+      );
+    } else {
+      return (
+        <tr>
+          <td colSpan={7}>
+            <NoResult
+              title={"Sorry! No Result Found"}
+              desc={
+                "We've searched more than 150+ customer We did not find any customer for you search."
+              }
+            />
+          </td>
+        </tr>
+      );
+    }
+  }
+
   return (
-    <div className="overflow-x-hidden">
-      <div class="relative overflow-x-auto shadow-md sm:rounded-lg">
-        <table class="w-full text-sm text-left rtl:text-right text-gray-500 dark:text-gray-400">
-          <thead class="text-xs text-gray-700 uppercase bg-gray-50 dark:bg-gray-700 dark:text-gray-400">
-            <tr>
-              <th scope="col" class="px-6 py-3">
-                Product name
-              </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">
-                  Color
-                  <a href="#">
-                    <svg
-                      class="w-3 h-3 ms-1.5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
-                    </svg>
-                  </a>
-                </div>
-              </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">
-                  Category
-                  <a href="#">
-                    <svg
-                      class="w-3 h-3 ms-1.5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
-                    </svg>
-                  </a>
-                </div>
-              </th>
-              <th scope="col" class="px-6 py-3">
-                <div class="flex items-center">
-                  Price
-                  <a href="#">
-                    <svg
-                      class="w-3 h-3 ms-1.5"
-                      aria-hidden="true"
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8.574 11.024h6.852a2.075 2.075 0 0 0 1.847-1.086 1.9 1.9 0 0 0-.11-1.986L13.736 2.9a2.122 2.122 0 0 0-3.472 0L6.837 7.952a1.9 1.9 0 0 0-.11 1.986 2.074 2.074 0 0 0 1.847 1.086Zm6.852 1.952H8.574a2.072 2.072 0 0 0-1.847 1.087 1.9 1.9 0 0 0 .11 1.985l3.426 5.05a2.123 2.123 0 0 0 3.472 0l3.427-5.05a1.9 1.9 0 0 0 .11-1.985 2.074 2.074 0 0 0-1.846-1.087Z" />
-                    </svg>
-                  </a>
-                </div>
-              </th>
-              <th scope="col" class="px-6 py-3">
-                <span class="sr-only">Edit</span>
-              </th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Apple MacBook Pro 17"
-              </th>
-              <td class="px-6 py-4">Silver</td>
-              <td class="px-6 py-4">Laptop</td>
-              <td class="px-6 py-4">$2999</td>
-              <td class="px-6 py-4 text-right">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Edit
-                </a>
-              </td>
-            </tr>
-            <tr class="bg-white border-b dark:bg-gray-800 dark:border-gray-700 border-gray-200">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Microsoft Surface Pro
-              </th>
-              <td class="px-6 py-4">White</td>
-              <td class="px-6 py-4">Laptop PC</td>
-              <td class="px-6 py-4">$1999</td>
-              <td class="px-6 py-4 text-right">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Edit
-                </a>
-              </td>
-            </tr>
-            <tr class="bg-white dark:bg-gray-800">
-              <th
-                scope="row"
-                class="px-6 py-4 font-medium text-gray-900 whitespace-nowrap dark:text-white"
-              >
-                Magic Mouse 2
-              </th>
-              <td class="px-6 py-4">Black</td>
-              <td class="px-6 py-4">Accessories</td>
-              <td class="px-6 py-4">$99</td>
-              <td class="px-6 py-4 text-right">
-                <a
-                  href="#"
-                  class="font-medium text-blue-600 dark:text-blue-500 hover:underline"
-                >
-                  Edit
-                </a>
-              </td>
-            </tr>
-          </tbody>
-        </table>
+    <PageWrapper className="p-5 ">
+      <div className="flex gap-5  max-lg:flex-col">
+        <div className="bg-white min-w-[250px] dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm">
+          Side Layout
+        </div>
+        <div className="bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm  overflow-x-auto">
+          <TopTable getSearchValue={getSearchValue} />
+
+          {!isLoading && (
+            <Table
+              thead={[
+                "Product",
+                "Stock",
+                "Price",
+                "Orders",
+                "Rating",
+                "Published",
+                "Action",
+              ]}
+              TableRows={TableRows}
+            />
+          )}
+
+          <div
+            className={clsx(
+              "flex items-center justify-center gap-2 flex-wrap p-3  pt-8"
+            )}
+          >
+            <p className="text-sm dark:text-white">
+              Showing {currentPage === 1 ? "1" : (currentPage - 1) * 15} to{" "}
+              <span>{Math.min(currentPage * 15, products.length)} of </span>
+              {products.length} results
+            </p>
+            <Pagination
+              currentPage={currentPage}
+              totalItems={filteredProducts.length}
+              onPageChange={setCurrentPage}
+              itemsPerPage={15}
+            />
+          </div>
+
+          {/*Confirm Delete Dialog  */}
+          {toggleConfirmDialog && (
+            <ConfirmDialog
+              desc="Are you sure you want to delete this Product?"
+              closeDialog={handelCloseConfirmDialog}
+              action={handelDeleteProduct}
+            />
+          )}
+          {/* Success Alert */}
+          <SuccessAlert
+            show={showAlert}
+            msg="Product Deleted Successful"
+            onClose={() => setShowAlert(false)}
+          />
+        </div>
+      </div>
+    </PageWrapper>
+  );
+}
+
+function TopTable({ getSearchValue }) {
+  return (
+    <div className="p-3 pt-5">
+      <div className="flex flex-wrap justify-between items-center pb-2 mb-5 gap-5">
+        <Link
+          to="/CreateProducts"
+          type="button"
+          className="py-2.5 mr-2 px-5 rounded-sm font-bold cursor-pointer text-sm text-white bg-[#0bb39c]"
+        >
+          <AddIcon fontSize="small" className="mr-2" />
+          Add Product
+        </Link>
+        <input
+          onInput={(e) => {
+            getSearchValue(e.target.value);
+          }}
+          className=" rounded-sm p-2  text-sm outline-none border border-[#94a3d465] dark:text-[var(--color-text-500)]"
+          type="text"
+          placeholder="Search for Products..."
+        />
       </div>
     </div>
   );

@@ -201,61 +201,56 @@ export default function Products() {
 
   return (
     <PageWrapper className="p-5 ">
-      <div className="flex gap-5  max-lg:flex-col">
-        <div className="bg-white min-w-[250px] dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm">
-          Side Layout
-        </div>
-        <div className="bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm  overflow-x-auto">
-          <TopTable getSearchValue={getSearchValue} />
+      <div className="bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm  overflow-x-auto">
+        <TopTable getSearchValue={getSearchValue} />
 
-          {!isLoading && (
-            <Table
-              thead={[
-                "Product",
-                "Stock",
-                "Price",
-                "Orders",
-                "Rating",
-                "Published",
-                "Action",
-              ]}
-              TableRows={TableRows}
-            />
+        {!isLoading && (
+          <Table
+            thead={[
+              "Product",
+              "Stock",
+              "Price",
+              "Orders",
+              "Rating",
+              "Published",
+              "Action",
+            ]}
+            TableRows={TableRows}
+          />
+        )}
+
+        <div
+          className={clsx(
+            "flex items-center justify-center gap-2 flex-wrap p-3  pt-8"
           )}
-
-          <div
-            className={clsx(
-              "flex items-center justify-center gap-2 flex-wrap p-3  pt-8"
-            )}
-          >
-            <p className="text-sm dark:text-white">
-              Showing {currentPage === 1 ? "1" : (currentPage - 1) * 15} to{" "}
-              <span>{Math.min(currentPage * 15, products.length)} of </span>
-              {products.length} results
-            </p>
-            <Pagination
-              currentPage={currentPage}
-              totalItems={filteredProducts.length}
-              onPageChange={setCurrentPage}
-              itemsPerPage={15}
-            />
-          </div>
-
-          {/*Confirm Delete Dialog  */}
-          {toggleConfirmDialog && (
-            <ConfirmDialog
-              desc="Are you sure you want to delete this Product?"
-              closeDialog={handelCloseConfirmDialog}
-              action={handelDeleteProduct}
-            />
-          )}
-          {/* Success Alert */}
-          <SuccessAlert
-            show={showAlert}
-            msg="Product Deleted Successful"
-            onClose={() => setShowAlert(false)}
+        >
+          <p className="text-sm dark:text-white">
+            Showing {currentPage === 1 ? "1" : (currentPage - 1) * 15} to{" "}
+            <span>{Math.min(currentPage * 15, products.length)} of </span>
+            {products.length} results
+          </p>
+          <Pagination
+            currentPage={currentPage}
+            totalItems={filteredProducts.length}
+            onPageChange={setCurrentPage}
+            itemsPerPage={15}
           />
         </div>
+
+        {/*Confirm Delete Dialog  */}
+        {toggleConfirmDialog && (
+          <ConfirmDialog
+            desc="Are you sure you want to delete this Product?"
+            closeDialog={handelCloseConfirmDialog}
+            action={handelDeleteProduct}
+          />
+        )}
+        {/* Success Alert */}
+        <SuccessAlert
+          show={showAlert}
+          msg="Product Deleted Successful"
+          onClose={() => setShowAlert(false)}
+        />
       </div>
     </PageWrapper>
   );
@@ -263,7 +258,7 @@ export default function Products() {
 
 function TopTable({ getSearchValue }) {
   return (
-    <div className="p-3 pt-5">
+    <div className="px-3 pt-5 ">
       <div className="flex flex-wrap justify-between items-center pb-2 mb-5 gap-5">
         <Link
           to="/CreateProducts"
@@ -277,9 +272,9 @@ function TopTable({ getSearchValue }) {
           onInput={(e) => {
             getSearchValue(e.target.value);
           }}
-          className=" rounded-sm p-2  text-sm outline-none border border-[#94a3d465] dark:text-[var(--color-text-500)]"
+          className=" rounded-sm p-2  text-sm outline-none border border-[#94a3d465] max-w-[200px] grow dark:text-[var(--color-text-500)]"
           type="text"
-          placeholder="Search for Products..."
+          placeholder="Search by Product Name"
         />
       </div>
     </div>

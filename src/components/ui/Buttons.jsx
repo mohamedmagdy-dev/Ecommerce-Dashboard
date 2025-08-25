@@ -17,7 +17,7 @@ export function Button({
     color === "orange" &&
       "text-[var(--color-orange)]  hover:bg-[var(--color-orange)] hover:text-white bg-[var(--color-lightOrange)] dark:bg-[var(--color-darkOrange)]  max-md:focus:text-white max-md:focus:bg-[var(--color-orange)] ",
     color === "purple" &&
-      "text-[var(--color-orange)]  hover:bg-[var(--color-orange)] hover:text-white bg-[var(--color-lightOrange)] dark:bg-[var(--color-darkOrange)]  max-md:focus:text-white max-md:focus:bg-[var(--color-orange)] ",
+      "text-[var(--color-purple)]  hover:bg-[var(--color-purple)] hover:text-white bg-[var(--color-lightPurple)] dark:bg-[var(--color-darkPurple)]  max-md:focus:text-white max-md:focus:bg-[var(--color-purple)] ",
     color === "red" &&
       "text-[#f0657e]  hover:bg-[#f0657e] hover:text-white bg-[#fce7e3] dark:bg-[#402e2e]  max-md:focus:text-white max-md:focus:bg-[#f0657e] ",
     style

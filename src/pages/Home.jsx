@@ -8,6 +8,8 @@ import StatueCards from "../components/StatueCards";
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import MicrowaveIcon from "@mui/icons-material/Microwave";
 import { useState } from "react";
+// React Router
+import { Link } from "react-router-dom";
 export default function Home() {
   const [toggleRightMenu, setToggleRightMenu] = useState(false);
 
@@ -33,9 +35,15 @@ export default function Home() {
           <div className="flex items-center gap-5 flex-wrap ">
             <DatePicker />
             <div className="flex gap-5">
-              <Button title="Add Product" color="green" style="cursor-pointer">
-                <LibraryAddIcon fontSize="" />
-              </Button>
+              <Link to="/createProducts">
+                <Button
+                  title="Add Product"
+                  color="green"
+                  style="cursor-pointer"
+                >
+                  <LibraryAddIcon fontSize="" />
+                </Button>
+              </Link>
               <Button
                 color="blue"
                 style="cursor-pointer"

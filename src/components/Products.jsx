@@ -24,12 +24,12 @@ export default function ProductsComponent() {
   const [showAlert, setShowAlert] = useState(false);
   const [searchFilter, setSearchFilter] = useState("");
   const [selectedProduct, setSelectedProduct] = useState({});
-
   const [filteredProducts, setFilteredProducts] = useState([]);
+  const itemPerPage = 15;
 
   const displayedProducts = useMemo(() => {
-    const startIndex = (currentPage - 1) * 15;
-    const endIndex = startIndex + 15;
+    const startIndex = (currentPage - 1) * itemPerPage;
+    const endIndex = startIndex + itemPerPage;
     return filteredProducts.slice(startIndex, endIndex);
   }, [currentPage, filteredProducts]);
 
@@ -222,15 +222,18 @@ export default function ProductsComponent() {
         )}
       >
         <p className="text-sm dark:text-white">
-          Showing {currentPage === 1 ? "1" : (currentPage - 1) * 15} to{" "}
-          <span>{Math.min(currentPage * 15, products.length)} of </span>
+          Showing {currentPage === 1 ? "1" : (currentPage - 1) * itemPerPage} to{" "}
+          <span>
+            {Math.min(currentPage * itemPerPage, products.length)} of{" "}
+          </span>
           {products.length} results
         </p>
+
         <Pagination
           currentPage={currentPage}
           totalItems={filteredProducts.length}
           onPageChange={setCurrentPage}
-          itemsPerPage={15}
+          itemsPerPage={itemPerPage}
         />
       </div>
 

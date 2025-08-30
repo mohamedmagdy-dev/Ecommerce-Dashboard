@@ -5,18 +5,18 @@ import Navigator from "../components/Navigator";
 import Footer from "../components/Footer";
 import clsx from "clsx";
 
-export default function DashboardLayoutBasic({ children }) {
+export default function DashboardContainer({ children }) {
   const [collapseMenu, setCollapseMenu] = useState(false);
 
   function handleCollapseMenu() {
     setCollapseMenu((prev) => !prev);
   }
   return (
-    <div>
+    <div >
       <Navigator collapseMenu={collapseMenu} />
       <div
         className={clsx(
-          "grow ml-[54px] min-md:ml-[240px] ",
+          " ml-[54px] min-md:ml-[240px] ",
           collapseMenu && "!ml-[54px]"
         )}
       >

@@ -23,7 +23,7 @@ export default function Pagination({
           "cursor-pointer px-4  mr-2 border select-none border-[var(--color-primary-light)]  rounded-sm",
           currentPage === 1 || totalItems === 0
             ? "opacity-55  dark:text-gray-200 !cursor-default"
-            : "text-[#41528a]",
+            : "text-[#41528a] dark:text-white dark:bg-[#41528a]",
           currentPage !== 1 && "cursor-pointer"
         )}
       >
@@ -52,7 +52,7 @@ export default function Pagination({
           " px-4  ml-2 border select-none border-[var(--color-primary-light)]  rounded-sm",
           currentPage === totalPages || totalItems === 0
             ? "opacity-55 dark:text-gray-200 !cursor-default"
-            : "text-[#41528a]",
+            : "text-[#41528a] dark:text-white dark:bg-[#41528a]",
           currentPage !== totalPages && "cursor-pointer"
         )}
       >

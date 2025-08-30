@@ -4,12 +4,16 @@ import DatePicker from "../components/ui/DatePicker";
 import { Button } from "../components/ui/Buttons";
 import PageWrapper from "../components/PageWrapper";
 import StatueCards from "../components/StatueCards";
+import BestSellingProducts from "../components/BestSellingProducts";
+import TopSellers from "../components/TopSellers";
 // Icons
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import MicrowaveIcon from "@mui/icons-material/Microwave";
 import { useState } from "react";
 // React Router
 import { Link } from "react-router-dom";
+import SellsMap from "../components/SellsMap";
+
 export default function Home() {
   const [toggleRightMenu, setToggleRightMenu] = useState(false);
 
@@ -18,8 +22,8 @@ export default function Home() {
   }
 
   return (
-    <PageWrapper className="flex ">
-      <div className="p-5 grow w-full ">
+    <PageWrapper className="min-[1170px]:flex w-full">
+      <div className="p-5 grow">
         {/* Row 1*/}
         <div className="flex justify-between flex-wrap gap-5 mb-5">
           {/* Hello Text */}
@@ -58,6 +62,16 @@ export default function Home() {
         {/* Row 2 */}
         <StatueCards />
         {/* Row 3 */}
+        <div className="flex justify-between max-lg:flex-col gap-5 mb-5 overflow-hidden">
+          <div className="bg-green-300 grow h-100"></div>
+          <SellsMap />
+        </div>
+        {/* Row 4 */}
+
+        <div className="grid grid-cols-2 max-lg:grid-cols-1  gap-5 mb-5">
+          <BestSellingProducts />
+          <TopSellers />
+        </div>
       </div>
       <LayoutRightSide
         toggleRightMenu={toggleRightMenu}

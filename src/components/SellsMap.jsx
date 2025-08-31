@@ -27,6 +27,7 @@ export default function SellsMap() {
       <div className="h-100 p-4 w-full ">
         <ResponsiveChoropleth
           data={salesData}
+          
           features={worldCountries.features}
           margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
           colors="blues"

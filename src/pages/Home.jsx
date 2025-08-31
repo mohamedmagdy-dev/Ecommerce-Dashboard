@@ -7,6 +7,8 @@ import StatueCards from "../components/StatueCards";
 import BestSellingProducts from "../components/BestSellingProducts";
 import TopSellers from "../components/TopSellers";
 import VisitsSource from "../components/VisitsSource";
+import RevenueChart from "../components/RevenueChart";
+
 // Icons
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import MicrowaveIcon from "@mui/icons-material/Microwave";
@@ -64,8 +66,8 @@ export default function Home() {
         {/* Row 2 */}
         <StatueCards />
         {/* Row 3 */}
-        <div className="flex justify-between max-lg:flex-col gap-5 mb-5 overflow-hidden">
-          <div className="bg-green-300 grow h-100"></div>
+        <div className="flex max-xl:flex-wrap justify-between max-lg:flex-col gap-5 mb-5 overflow-hidden">
+          <RevenueChart />
           <SellsMap />
         </div>
         {/* Row 4 */}

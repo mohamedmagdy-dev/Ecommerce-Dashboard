@@ -7,9 +7,8 @@ import ProductReviews from "./ProductReviews";
 import CustomerReviews from "./CustomerReviews";
 import ReferBox from "./ReferBox";
 export default function LayoutRightSide({ toggleRightMenu, toggleRMenuFun }) {
-
   const layoutStyle = clsx(
-    " max-sm:w-[calc(100%-54px)] max-lg:h-[calc(100%+52px)] min-lg:min-h-screen dark:border-[#94a3d465] dark:bg-[var(--color-primary-dark)] overflow-y-auto bg-white border-l border-white shadow-sm  max-md:!top-[52px] min-lg:min-w-[300px] min-lg:max-w-[300px] max-[1170px]:fixed max-[1170px]:right-0 max-[1170px]:top-[64px]  bg-white dark:bg-[var(--color-primary-dark)] px-5 pt-3 pb-8"
+    " max-sm:w-[calc(100%-54px)] max-[1170px]:!max-h-[calc(100vh-52px)] min-[1170px]:min-h-full dark:border-[#94a3d465] dark:bg-[var(--color-primary-dark)] overflow-y-auto bg-white border-l border-white shadow-sm  max-md:!top-[52px] min-lg:min-w-[300px] min-lg:max-w-[300px] max-[1170px]:fixed max-[1170px]:right-0 max-[1170px]:top-[64px]  bg-white dark:bg-[var(--color-primary-dark)] px-5 pt-3 pb-8"
   );
 
   function SideLayout() {

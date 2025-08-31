@@ -6,6 +6,7 @@ import PageWrapper from "../components/PageWrapper";
 import StatueCards from "../components/StatueCards";
 import BestSellingProducts from "../components/BestSellingProducts";
 import TopSellers from "../components/TopSellers";
+import VisitsSource from "../components/VisitsSource";
 // Icons
 import LibraryAddIcon from "@mui/icons-material/LibraryAdd";
 import MicrowaveIcon from "@mui/icons-material/Microwave";
@@ -13,6 +14,7 @@ import { useState } from "react";
 // React Router
 import { Link } from "react-router-dom";
 import SellsMap from "../components/SellsMap";
+import RecentOrders from "../components/RecentOrders";
 
 export default function Home() {
   const [toggleRightMenu, setToggleRightMenu] = useState(false);
@@ -71,6 +73,11 @@ export default function Home() {
         <div className="grid grid-cols-2 max-lg:grid-cols-1  gap-5 mb-5">
           <BestSellingProducts />
           <TopSellers />
+        </div>
+        {/* Row 5 */}
+        <div className="grid grid-cols-2 max-lg:grid-cols-1  gap-5 mb-5">
+          <VisitsSource />
+          <RecentOrders />
         </div>
       </div>
       <LayoutRightSide

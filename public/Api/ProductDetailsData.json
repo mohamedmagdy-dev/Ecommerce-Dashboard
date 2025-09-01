@@ -26,19 +26,11 @@
   "services": ["10 Days Replacement", "Cash on Delivery available"],
   "productDescription": {
     "specification": {
-      "Category": "T-Shirt",
-      "Brand": "Tommy Hilfiger",
-      "Color": "Blue",
-      "Material": "Cotton",
-      "Weight": "140 Gram"
+      "description": "Experience unmatched comfort and style with this premium men’s sweatshirt, crafted for everyday wear. Made from 100% soft cotton, it combines durability with a modern design that suits all occasions. Perfect for layering or wearing alone, this sweatshirt brings both fashion and functionality to your wardrobe."
     },
-    "details": [
-      "Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton.",
-      "Machine Wash",
-      "Fit Type: Regular",
-      "100% Cotton",
-      "Long sleeve"
-    ]
+    "details": {
+      "description": "Stay cozy and stylish with this premium men’s sweatshirt. Made from soft, breathable cotton, it offers maximum comfort for daily wear. Its modern design and versatile color make it perfect for layering or wearing on its own. Ideal for casual outings or relaxed weekends."
+    }
   },
   "images": {
     "main": "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
@@ -50,15 +42,40 @@
     ]
   },
   "ratings": {
-    "average": 4.5,
-    "totalReviews": 5500,
-    "breakdown": {
-      "5": 2758,
-      "4": 1063,
-      "3": 997,
-      "2": 408,
-      "1": 274
-    }
+    "rating": 4.2,
+    "totalReviews": 5230,
+    "breakdown": [
+      {
+        "name": "5 star",
+        "count": 2600,
+        "percentage": 49.71,
+        "color": "#41528a"
+      },
+      {
+        "name": "4 star",
+        "count": 1200,
+        "percentage": 22.95,
+        "color": "#0bb39c"
+      },
+      {
+        "name": "3 star",
+        "count": 800,
+        "percentage": 15.31,
+        "color": "#2a9ddb"
+      },
+      {
+        "name": "2 star",
+        "count": 350,
+        "percentage": 6.69,
+        "color": "#f7b84a"
+      },
+      {
+        "name": "1 star",
+        "count": 280,
+        "percentage": 5.35,
+        "color": "#f06448"
+      }
+    ]
   },
   "customerReviews": [
     {

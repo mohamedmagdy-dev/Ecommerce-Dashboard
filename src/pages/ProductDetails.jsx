@@ -11,12 +11,13 @@ import BookmarksOutlinedIcon from "@mui/icons-material/BookmarksOutlined";
 import DynamicFeedOutlinedIcon from "@mui/icons-material/DynamicFeedOutlined";
 import DownloadOutlinedIcon from "@mui/icons-material/DownloadOutlined";
 import clsx from "clsx";
+import CustomerReviews from "../components/CustomerReviews";
 export default function ProductDetails() {
   const [productData, setProductData] = useState({});
   const [isLoading, setIsLoading] = useState(true);
   const [selectedSize, setSelectedSize] = useState("");
   const [selectedColor, setSelectedColor] = useState("");
-
+  const [showTap, setShowTap] = useState("Specification");
   useEffect(() => {
     async function productData() {
       try {
@@ -34,14 +35,14 @@ export default function ProductDetails() {
   return (
     <PageWrapper className="p-5">
       {!isLoading && (
-        <div className="flex gap-10 relative bg-white dark:bg-[var(--color-primary-dark)]  p-5 rounded-sm">
+        <div className="flex gap-10 relative bg-white dark:bg-[var(--color-primary-dark)] max-lg:flex-wrap p-5 rounded-sm">
           <Link
             to="/CreateProduct"
             className="absolute right-5 top-5 bg-[#f5f7fa] dark:bg-[#282b2e] rounded  px-2 py-1"
           >
             <EditIcon fontSize="" />
           </Link>
-          <div>
+          <div className="relative">
             <Slider
               main={productData.images.main}
               thumbnails={productData.images.thumbnails}
@@ -127,7 +128,7 @@ export default function ProductDetails() {
               </div>
             </div>
             {/* Sizes ---- colors */}
-            <div className="my-5 pr-5 flex gap-10 item-center justify-between flex-wrap">
+            <div className="my-8 pr-5 flex gap-10 item-center justify-between flex-wrap">
               <div>
                 <h3 className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] font-semibold">
                   Sizes :
@@ -185,32 +186,125 @@ export default function ProductDetails() {
               </p>
             </div>
             {/* Features  ----  Services */}
-            <div className="my-5 pr-5 flex gap-10 item-center justify-between flex-wrap">
-              <ul>
-                {productData.features.map((feature, index) => {
-                  return (
-                    <li
-                      className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]"
-                      key={index}
-                    >
-                      {feature}
-                    </li>
-                  );
-                })}
-              </ul>
-              <ul className="list">
-                {productData.services.map((service, index) => {
-                  return (
-                    <li
-                      className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]"
-                      key={index}
-                    >
-                      {service}
-                    </li>
-                  );
-                })}
-              </ul>
+            <div className="my-8 pr-5 flex gap-10 item-center justify-between flex-wrap">
+              <div>
+                <h3 className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] font-semibold">
+                  Features :
+                </h3>
+                <ul className="list-disc pl-5 text-sm">
+                  {productData.features.map((feature, index) => {
+                    return (
+                      <li
+                        className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]"
+                        key={index}
+                      >
+                        {feature}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
+              <div>
+                <h3 className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] font-semibold">
+                  Services :
+                </h3>
+                <ul className="list-disc pl-5 text-sm">
+                  {productData.services.map((service, index) => {
+                    return (
+                      <li
+                        className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]"
+                        key={index}
+                      >
+                        {service}
+                      </li>
+                    );
+                  })}
+                </ul>
+              </div>
             </div>
+            {/* Product Description */}
+            <div className="mb-8">
+              <div className="mb-4 border-b border-gray-200 dark:border-gray-700">
+                <ul
+                  className="flex flex-wrap -mb-px text-sm font-medium text-center"
+                  id="default-tab"
+                  data-tabs-toggle="#default-tab-content"
+                  role="tablist"
+                >
+                  <li className="me-2" role="presentation">
+                    <button
+                      className={clsx(
+                        "inline-block p-4 rounded-t-lg border-b-2 border-transparent cursor-pointer duration-200 text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]",
+                        showTap === "Specification"
+                          ? " !border-green-500 text-green-500 "
+                          : "hidden"
+                      )}
+                      id="Specification-tab"
+                      data-tabs-target="#Specification"
+                      type="button"
+                      role="tab"
+                      aria-controls="Specification"
+                      aria-selected="false"
+                      onClick={() => setShowTap("Specification")}
+                    >
+                      Specification
+                    </button>
+                  </li>
+                  <li className="me-2" role="presentation">
+                    <button
+                      className={clsx(
+                        "inline-block p-4 rounded-t-lg border-b-2 border-transparent cursor-pointer duration-200 text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]",
+                        showTap === "Details"
+                          ? " !border-green-500 text-green-500 "
+                          : "hidden"
+                      )}
+                      id="Details-tab"
+                      data-tabs-target="#Details"
+                      type="button"
+                      role="tab"
+                      aria-controls="Details"
+                      aria-selected="false"
+                      onClick={() => setShowTap("Details")}
+                    >
+                      Details
+                    </button>
+                  </li>
+                </ul>
+              </div>
+              <div id="default-tab-content">
+                <div
+                  className={clsx(
+                    " p-4 rounded-lg bg-gray-50 dark:bg-gray-800",
+                    showTap === "Specification" ? "block " : "hidden"
+                  )}
+                  id="Specification"
+                  role="tabpanel"
+                  aria-labelledby="Specification-tab"
+                >
+                  <p className="text-sm text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]">
+                    {productData.productDescription.specification.description}
+                  </p>
+                </div>
+                <div
+                  className={clsx(
+                    "hidden p-4 rounded-lg bg-gray-50 dark:bg-gray-800",
+                    showTap === "Details" && "!block"
+                  )}
+                  id="Details"
+                  role="tabpanel"
+                  aria-labelledby="Details-tab"
+                >
+                  <p className="text-sm text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]">
+                    {productData.productDescription.details.description}
+                  </p>
+                </div>
+              </div>
+            </div>
+            {/* Ratings & Reviews */}
+            <CustomerReviews
+              RateObj={productData.ratings}
+              loading={isLoading}
+            />
           </div>
         </div>
       )}

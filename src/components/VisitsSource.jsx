@@ -40,7 +40,7 @@ export const data = {
 
 export default function VisitsSource() {
   return (
-    <div className=" bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm">
+    <div className=" bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm w-full">
       <h3 className="text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] text-left font-semibold p-3 border-b border-gray-200 dark:border-[#94a3d465]">
         Store Visits by Source
       </h3>
@@ -52,6 +52,8 @@ export default function VisitsSource() {
                 position: "bottom",
               },
             },
+
+            responsive: true,
           }}
           data={data}
         />

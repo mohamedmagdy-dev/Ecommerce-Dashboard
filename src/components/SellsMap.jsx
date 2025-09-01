@@ -1,5 +1,5 @@
 import { ResponsiveChoropleth } from "@nivo/geo";
-import worldCountries from "../../public/Api/world-countries.json";
+import worldCountries from "../assets/world-countries.json";
 const salesData = [
   { id: "EGY", value: 1200 },
   { id: "SAU", value: 900 },
@@ -20,14 +20,13 @@ const salesData = [
 
 export default function SellsMap() {
   return (
-    <div className=" min-lg:w-80 dark:bg-[var(--color-primary-dark)]  bg-white rounded ">
+    <div className="min-lg:h-125 min-lg:w-80 dark:bg-[var(--color-primary-dark)]  bg-white rounded ">
       <h3 className="text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] font-semibold p-3 border-b border-gray-200 dark:border-[#94a3d465]">
         Sales by Locations
       </h3>
-      <div className="h-100 p-4 w-full ">
+      <div className="h-110 p-4 w-full ">
         <ResponsiveChoropleth
           data={salesData}
-          
           features={worldCountries.features}
           margin={{ top: 0, right: 0, bottom: 0, left: 0 }}
           colors="blues"

@@ -70,6 +70,7 @@ const options = {
       position: "bottom",
     },
   },
+  maintainAspectRatio: false,
   scales: {
     x: {
       stacked: true,
@@ -82,11 +83,11 @@ const options = {
 
 export default function RevenueChart() {
   return (
-    <div className="grow bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm">
+    <div className="grow bg-white dark:bg-[var(--color-secondary-900)] rounded-sm shadow-sm  min-lg:h-125 max-lg:w-full">
       <h3 className="text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] text-left font-semibold p-3 border-b border-gray-200 dark:border-[#94a3d465]">
         Store Visits by Source
       </h3>
-      <div className="p-3 w-full h-full flex items-center justify-center">
+      <div className="p-5 w-full h-full flex items-center justify-center">
         <Chart type="bar" data={data} options={options} />
       </div>
     </div>

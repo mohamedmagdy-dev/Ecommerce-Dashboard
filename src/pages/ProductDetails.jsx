@@ -160,7 +160,8 @@ export default function ProductDetails() {
                         key={index}
                         className={clsx(
                           "flex justify-center items-center cursor-pointer rounded-full border p-2 border-gray-200 dark:border-black  bg-white dark:bg-[#212529]",
-                          selectedColor === color.code && "!border-black dark:!border-gray-200"
+                          selectedColor === color.code &&
+                            "!border-black dark:!border-gray-200"
                         )}
                         onClick={() => setSelectedColor(color.code)}
                       >
@@ -173,6 +174,42 @@ export default function ProductDetails() {
                   })}
                 </div>
               </div>
+            </div>
+            {/* Description */}
+            <div>
+              <h3 className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] font-semibold">
+                Description:
+              </h3>
+              <p className="text-sm text-gray-400 mt-3">
+                {productData.description}
+              </p>
+            </div>
+            {/* Features  ----  Services */}
+            <div className="my-5 pr-5 flex gap-10 item-center justify-between flex-wrap">
+              <ul>
+                {productData.features.map((feature, index) => {
+                  return (
+                    <li
+                      className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]"
+                      key={index}
+                    >
+                      {feature}
+                    </li>
+                  );
+                })}
+              </ul>
+              <ul className="list">
+                {productData.services.map((service, index) => {
+                  return (
+                    <li
+                      className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)]"
+                      key={index}
+                    >
+                      {service}
+                    </li>
+                  );
+                })}
+              </ul>
             </div>
           </div>
         </div>

@@ -25,6 +25,10 @@ ChartJS.register(
   LineController
 );
 
+import { Chart } from "react-chartjs-2";
+
+
+
 const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];
 
 const data = {
@@ -73,7 +77,7 @@ const options = {
       position: "bottom",
     },
   },
-  maintainAspectRatio: false,
+  maintainAspectRatio: false, 
   scales: {
     x: {
       stacked: true,

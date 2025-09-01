@@ -1,0 +1,89 @@
+{
+  "id": 1,
+  "title": "Tommy Hilfiger Sweatshirt for Men (Pink)",
+  "seller": "Zoetic Fashion",
+  "published": "26 Mar, 2021",
+  "reviewsCount": 5500,
+  "rating": 4.5,
+  "price": 120.4,
+  "orders": 2234,
+  "stock": 1230,
+  "revenue": 60645,
+  "sizes": ["S", "M", "L", "XL"],
+  "colors": [
+    { "name": "Pink", "code": "#f4a6b3" },
+    { "name": "Blue", "code": "#3b82f6" },
+    { "name": "Black", "code": "#000000" },
+    { "name": "White", "code": "#ffffff" }
+  ],
+  "description": "Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton. This is one of the world’s leading designer lifestyle brands and is internationally recognized for celebrating the essence of classic American cool style, featuring preppy with a twist designs.",
+  "features": [
+    "Full Sleeve",
+    "Cotton",
+    "All Sizes available",
+    "4 Different Color"
+  ],
+  "services": ["10 Days Replacement", "Cash on Delivery available"],
+  "productDescription": {
+    "specification": {
+      "Category": "T-Shirt",
+      "Brand": "Tommy Hilfiger",
+      "Color": "Blue",
+      "Material": "Cotton",
+      "Weight": "140 Gram"
+    },
+    "details": [
+      "Tommy Hilfiger men striped pink sweatshirt. Crafted with cotton. Material composition is 100% organic cotton.",
+      "Machine Wash",
+      "Fit Type: Regular",
+      "100% Cotton",
+      "Long sleeve"
+    ]
+  },
+  "images": {
+    "main": "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+    "thumbnails": [
+      "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg",
+      "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-3.jpg",
+      "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-4.jpg",
+      "https://flowbite.s3.amazonaws.com/docs/gallery/square/image-5.jpg"
+    ]
+  },
+  "ratings": {
+    "average": 4.5,
+    "totalReviews": 5500,
+    "breakdown": {
+      "5": 2758,
+      "4": 1063,
+      "3": 997,
+      "2": 408,
+      "1": 274
+    }
+  },
+  "customerReviews": [
+    {
+      "rating": 4.2,
+      "comment": "Superb sweatshirt. I loved it. It is for winter.",
+      "author": "Henry",
+      "date": "12 Jul, 21"
+    },
+    {
+      "rating": 4.0,
+      "comment": "Great at this price, Product quality and look is awesome.",
+      "author": "Nancy",
+      "date": "06 Jul, 21"
+    },
+    {
+      "rating": 4.2,
+      "comment": "Good product. I am so happy.",
+      "author": "Joseph",
+      "date": "06 Jul, 21"
+    },
+    {
+      "rating": 4.1,
+      "comment": "Nice Product, Good Quality.",
+      "author": "Jimmy",
+      "date": "24 Jun, 21"
+    }
+  ]
+}

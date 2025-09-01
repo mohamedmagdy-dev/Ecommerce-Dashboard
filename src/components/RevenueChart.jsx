@@ -8,8 +8,9 @@ import {
   Title,
   Tooltip,
   Legend,
+  BarController,
+  LineController,
 } from "chart.js";
-import { Chart } from "react-chartjs-2";
 
 ChartJS.register(
   CategoryScale,
@@ -19,7 +20,9 @@ ChartJS.register(
   PointElement,
   Title,
   Tooltip,
-  Legend
+  Legend,
+  BarController,
+  LineController
 );
 
 const labels = ["Jan", "Feb", "Mar", "Apr", "May", "Jun"];

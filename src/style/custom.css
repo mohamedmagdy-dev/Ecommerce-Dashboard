@@ -1,0 +1,6 @@
+html.dark .ql-toolbar .ql-stroke {
+  stroke: #fff !important;
+}
+html.dark .ql-toolbar .ql-fill {
+  fill: #fff !important;
+}

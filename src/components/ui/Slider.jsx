@@ -11,7 +11,10 @@ export default function Slider({ main, thumbnails }) {
           alt="Main Img"
         />
       </div>
-      <div className={clsx("grid gap-3", `grid-cols-${thumbnails.length}`)}>
+      <div
+        className={clsx("grid gap-3")}
+        style={{ gridTemplateColumns: `repeat(${thumbnails.length},1fr)` }}
+      >
         {thumbnails.map((thumb, index) => {
           return (
             <div

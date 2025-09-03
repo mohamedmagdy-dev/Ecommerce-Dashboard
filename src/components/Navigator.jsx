@@ -83,7 +83,7 @@ export default function Navigator({ collapseMenu }) {
   );
 
   const listItemStyle = (path) => {
-    return `duration-200 text-md dark:text-[var(--color-text-800)] hover:text-[var(--color-text-500)]  ${
+    return `duration-200 text-sm dark:text-[var(--color-text-800)] hover:text-[var(--color-text-500)]  ${
       location.pathname === path
         ? "!text-[var(--color-text-500)] "
         : "text-[var(--color-text-700)] "

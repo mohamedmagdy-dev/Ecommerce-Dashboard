@@ -35,26 +35,39 @@ export default function Navigator({ collapseMenu }) {
       path: "/Products",
     },
     {
-      text: "Check out",
-      icon: ShoppingCartCheckoutIcon,
-      path: "/Checkout",
-    },
-    {
       text: "Create Product",
       icon: BorderColorIcon,
       path: "/CreateProduct",
-    },
-    { text: "Orders", icon: SellIcon, path: "/Orders" },
-    {
-      text: "Customers",
-      icon: SupportAgentIcon,
-      path: "/Customers",
     },
     {
       text: "Product Details",
       icon: SettingsSuggestIcon,
       path: "/ProductDetails",
     },
+    { text: "Orders", icon: SellIcon, path: "/Orders" },
+    {
+      text: "Order Details",
+      icon: LocalMallIcon,
+      path: "/OrderDetails",
+    },
+
+    {
+      text: "Customers",
+      icon: SupportAgentIcon,
+      path: "/Customers",
+    },
+
+    {
+      text: "Shopping Cart",
+      icon: ShoppingCartIcon,
+      path: "/ShoppingCart",
+    },
+    {
+      text: "Check out",
+      icon: ShoppingCartCheckoutIcon,
+      path: "/Checkout",
+    },
+
     {
       text: "Sellers",
       icon: SettingsAccessibilityIcon,
@@ -64,16 +77,6 @@ export default function Navigator({ collapseMenu }) {
       text: "Sellers Details",
       icon: ManageAccountsIcon,
       path: "/SellersDetails",
-    },
-    {
-      text: "Shopping Cart",
-      icon: ShoppingCartIcon,
-      path: "/ShoppingCart",
-    },
-    {
-      text: "Order Details",
-      icon: LocalMallIcon,
-      path: "/OrderDetails",
     },
   ];
 

@@ -1,0 +1,31 @@
+[
+  {
+    "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+    "productId": "01K2ABKTFMQM0NE1SMN18EFXYB",
+    "productName": "350 ml Glass Grocery Container",
+    "productPrice": 4.13,
+    "color": "Pink",
+    "size": "M",
+    "count": 10
+  },
+  {
+    "productId": "01K2ABKTFQDPHB2KK0Y1E1WRRZ",
+
+    "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+    "productName": "Noise NoiseFit Endure Smart Watch",
+    "productPrice": 767.0,
+    "color": "Black",
+    "size": "32.5mm",
+    "count": 1
+  },
+  {
+    "productId": "01K2ABKTFSEKTS8X1ACSFMKCS4",
+
+    "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+    "productName": "Sweatshirt for Men (White)",
+    "productPrice": 0.13,
+    "color": "White",
+    "size": "350 ml",
+    "count": 2
+  }
+]

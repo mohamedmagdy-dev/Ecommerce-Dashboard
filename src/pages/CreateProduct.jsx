@@ -59,14 +59,13 @@ export default function CreateProduct() {
     setPreviewGalleryImgs(filterImgs);
   }
 
-
   return (
     <PageWrapper>
       <form
         onSubmit={handleSubmit(onSubmit)}
-        className="p-5  flex max-[1350px]:flex-col gap-5 "
+        className=" flex flex-col xl:flex-row gap-5 p-5 "
       >
-        <div className="flex-1 shrink relative pb-8">
+        <div className="flex-1  relative pb-8">
           <div className="bg-white dark:bg-[var(--color-secondary-900)]  rounded-sm p-3 mb-5">
             {/* Product Title */}
             <div className="flex flex-col space-y-2 mb-5">
@@ -312,7 +311,7 @@ export default function CreateProduct() {
                     </div>
                   </div>
                   <div className="flex gap-5 max-lg:flex-col">
-                    <div className="flex max-md:flex-col gap-5 grow">
+                    <div className="flex max-xl:flex-col gap-5 grow">
                       <div className="flex flex-col space-y-2 grow">
                         <label
                           htmlFor="Stocks"
@@ -358,7 +357,7 @@ export default function CreateProduct() {
                         )}
                       </div>
                     </div>
-                    <div className="flex max-md:flex-col gap-5 grow">
+                    <div className="flex max-xl:flex-col gap-5 grow">
                       <div className="flex flex-col space-y-2 grow">
                         <label
                           htmlFor="Discount"
@@ -390,7 +389,7 @@ export default function CreateProduct() {
                         </label>
                         <input
                           {...register("Orders", {
-                            required: "Manufacturer Name is required",
+                            required: "Orders is required",
                           })}
                           type="number"
                           id="Orders"
@@ -494,7 +493,7 @@ export default function CreateProduct() {
           </button>
         </div>
 
-        <div className="w-150 max-lg:w-full ">
+        <div className="w-full xl:w-1/3   h-fit">
           {/* Publish */}
           <div className="bg-white dark:bg-[var(--color-secondary-900)]  rounded-sm mb-5">
             <h3 className=" text-[var(--color-primary-dark)] dark:text-[var(--color-text-500)] font-bold border-b border-gray-200 p-3">

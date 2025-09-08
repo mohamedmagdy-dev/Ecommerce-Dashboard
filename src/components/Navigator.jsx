@@ -81,7 +81,7 @@ export default function Navigator({ collapseMenu }) {
   ];
 
   const asideStyle = clsx(
-    "h-[100vh] p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto fixed top-0 left-0  dark:bg-[var(--color-primary-dark)] bg-[var(--color-primary-light)]",
+    "min-h-screen p-3 shadow-sm w-fit min-md:w-[240px] overflow-y-auto  fixed top-0 dark:bg-[var(--color-primary-dark)] bg-[var(--color-primary-light)]",
     collapseMenu && "!min-w-[54px] !max-w-[54px]"
   );
 

@@ -12,7 +12,7 @@ export default function DashboardContainer({ children }) {
     setCollapseMenu((prev) => !prev);
   }
   return (
-    <div >
+    <div className="relative">
       <Navigator collapseMenu={collapseMenu} />
       <div
         className={clsx(

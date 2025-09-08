@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import PageWrapper from "../components/PageWrapper";
-
+import OrderSummary from "../components/OrderSummary";
 // Icons
 import DeleteIcon from "@mui/icons-material/Delete";
 import StarIcon from "@mui/icons-material/Star";
@@ -125,38 +125,13 @@ export default function ShoppingCart() {
           </div>
 
           <div className=" p-5">
-            <table className="w-full text-sm ">
-              <tbody>
-                <tr className="dark:text-gray-300">
-                  <td className="pb-3">Sub Total :</td>
-                  <td className="text-end pb-3">${subTotal.toFixed(2)}</td>
-                </tr>
-                <tr>
-                  <td className="pb-3 dark:text-gray-300">
-                    Discount{" "}
-                    {discount > 0 && (
-                      <span className="text-gray-400">(VELZON15)</span>
-                    )}
-                    :
-                  </td>
-                  <td className="text-end text-red-500 pb-3">
-                    -${discount.toFixed(2)}
-                  </td>
-                </tr>
-                <tr className="dark:text-gray-300">
-                  <td className="pb-3">Shipping Charge :</td>
-                  <td className="text-end pb-3">${shipping.toFixed(2)}</td>
-                </tr>
-                <tr className="dark:text-gray-300">
-                  <td className="pb-3">Estimated Tax (12.5%) :</td>
-                  <td className="text-end pb-3">${tax.toFixed(2)}</td>
-                </tr>
-                <tr className="font-semibold border-t border-dashed border-gray-200 dark:border-[#94a3d465] pt-3 dark:text-gray-300">
-                  <td>Total (USD) :</td>
-                  <td className="text-end pt-3">${total.toFixed(2)}</td>
-                </tr>
-              </tbody>
-            </table>
+            <OrderSummary
+              subTotal={subTotal}
+              discount={discount}
+              shipping={shipping}
+              tax={tax}
+              total={total}
+            />
           </div>
         </div>
       </div>

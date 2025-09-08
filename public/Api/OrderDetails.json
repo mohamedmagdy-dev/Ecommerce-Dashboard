@@ -1,0 +1,119 @@
+{
+  "orderId": "VL2667",
+  "invoiceUrl": "apps-invoices-details.html",
+  "products": [
+    {
+      "id": 1,
+      "name": "Sweatshirt for Men (Pink)",
+      "color": "Pink",
+      "size": "M",
+      "image": "https://fakestoreapi.com/img/81fPKd-2AYL._AC_SL1500_t.png",
+      "price": 119.99,
+      "quantity": 2,
+      "rating": 4.5,
+      "total": 239.98
+    },
+    {
+      "id": 2,
+      "name": "Noise NoiseFit Endure Smart Watch",
+      "color": "Black",
+      "size": "32.5mm",
+      "image": "https://fakestoreapi.com/img/71-3HjGNDUL._AC_SY879._SX._UX._SY._UY_t.png",
+
+      "price": 94.99,
+      "quantity": 1,
+      "rating": 4.5,
+      "total": 94.99
+    },
+    {
+      "id": 3,
+      "name": "350 ml Glass Grocery Container",
+      "color": "White",
+      "size": "350 ml",
+      "image": "https://fakestoreapi.com/img/71li-ujtlUL._AC_UX679_t.png",
+
+      "price": 24.99,
+      "quantity": 1,
+      "rating": 2.5,
+      "total": 24.99
+    }
+  ],
+  "summary": {
+    "subTotal": 359.96,
+    "discountCode": "VELZON15",
+    "discountAmount": 53.99,
+    "shippingCharge": 65.0,
+    "estimatedTax": 44.99,
+    "total": 415.96,
+    "currency": "USD"
+  },
+  "statusTimeline": [
+    {
+      "name": "Order Placed",
+      "date": "Wed, 15 Dec 2021",
+      "status": true,
+      "details": "An order has been placed."
+    },
+
+    {
+      "name": "Packed",
+      "status": true,
+
+      "date": "Thu, 16 Dec 2021",
+      "details": "Your Item has been picked up by courier partner"
+    },
+    {
+      "name": "Shipped",
+      "status": true,
+      "date": "Sat, 18 Dec 2021",
+      "details": "Your item has been shipped. and courier is RQK Logistics tracking Id MFDS1400457854 "
+    },
+    {
+      "name": "Out For Delivery",
+      "status": null,
+      "date": null,
+      "details": null
+    },
+    {
+      "name": "Delivered",
+      "status": null,
+      "date": null,
+      "details": null
+    }
+  ],
+  "logistics": {
+    "company": "RQK Logistics",
+    "trackingId": "MFDS1400457854",
+    "paymentMode": "Debit Card"
+  },
+  "customer": {
+    "name": "Joseph Parkers",
+    "email": "josephparker@gmail.com",
+    "phone": "+(256) 245451 441",
+    "avatar": "https://i.pravatar.cc/150?img=12"
+  },
+  "billingAddress": {
+    "name": "Joseph Parker",
+    "phone": "+(256) 245451 451",
+    "street": "2186 Joyce Street Rocky Mount",
+    "city": "New York",
+    "zipCode": "25645",
+    "country": "United States"
+  },
+  "shippingAddress": {
+    "name": "Joseph Parker",
+    "phone": "+(256) 245451 451",
+    "street": "2186 Joyce Street Rocky Mount",
+    "city": "California",
+    "zipCode": "24567",
+    "country": "United States"
+  },
+  "paymentDetails": {
+    "transactionId": "VLZ124561278124",
+    "method": "Debit Card",
+    "cardHolder": "Joseph Parker",
+    "cardNumber": "xxxx xxxx xxxx 2456",
+    "amount": 415.96,
+    "currency": "USD"
+  }
+}

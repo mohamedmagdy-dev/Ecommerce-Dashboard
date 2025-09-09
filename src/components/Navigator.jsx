@@ -8,13 +8,10 @@ import LogoSm from "../assets/imgs/logo-sm.png";
 // mui icons
 import DashboardIcon from "@mui/icons-material/Dashboard";
 import CategoryIcon from "@mui/icons-material/Category";
-import ShoppingCartCheckoutIcon from "@mui/icons-material/ShoppingCartCheckout";
 import BorderColorIcon from "@mui/icons-material/BorderColor";
 import SellIcon from "@mui/icons-material/Sell";
 import SupportAgentIcon from "@mui/icons-material/SupportAgent";
 import SettingsSuggestIcon from "@mui/icons-material/SettingsSuggest";
-import SettingsAccessibilityIcon from "@mui/icons-material/SettingsAccessibility";
-import ManageAccountsIcon from "@mui/icons-material/ManageAccounts";
 import ShoppingCartIcon from "@mui/icons-material/ShoppingCart";
 import LocalMallIcon from "@mui/icons-material/LocalMall";
 // clsx
@@ -61,22 +58,6 @@ export default function Navigator({ collapseMenu }) {
       text: "Shopping Cart",
       icon: ShoppingCartIcon,
       path: "/ShoppingCart",
-    },
-    {
-      text: "Check out",
-      icon: ShoppingCartCheckoutIcon,
-      path: "/Checkout",
-    },
-
-    {
-      text: "Sellers",
-      icon: SettingsAccessibilityIcon,
-      path: "/Sellers",
-    },
-    {
-      text: "Sellers Details",
-      icon: ManageAccountsIcon,
-      path: "/SellersDetails",
     },
   ];
 
